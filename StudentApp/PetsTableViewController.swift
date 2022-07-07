@@ -9,9 +9,9 @@ import UIKit
 import Kingfisher
 
 
-class StudentsTableViewController: UITableViewController {
+class PetsTableViewController: UITableViewController {
     
-    var data = [Student]()
+    var data = [Pet]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class StudentsTableViewController: UITableViewController {
                                               for: .valueChanged)
         self.refreshControl?.attributedTitle = NSAttributedString("Loading List...")
         
-        Model.studentDataNotification.observe {
+        Model.petDataNotification.observe {
             self.reload()
         }
         reload()
@@ -34,9 +34,9 @@ class StudentsTableViewController: UITableViewController {
         if self.refreshControl?.isRefreshing == false {
             self.refreshControl?.beginRefreshing()
         }
-        Model.instance.getAllStudents(){
-            students in
-            self.data = students
+        Model.instance.getAllPets(){
+            pets in
+            self.data = pets
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
@@ -58,7 +58,7 @@ class StudentsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "petCell", for: indexPath) as! PetTableViewCell
         let st = data[indexPath.row]
         cell.nameLabel.text = st.name!
         cell.id = st.id!
@@ -75,15 +75,15 @@ class StudentsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("Selcted row at \(indexPath.row)")
         selectedRow = indexPath.row
-        performSegue(withIdentifier: "openStudentDetails", sender: self)
+        performSegue(withIdentifier: "openPetDetails", sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "openStudentDetails"){
-            let dvc = segue.destination as! StudentDetailsViewController
+        if(segue.identifier == "openPetDetails"){
+            let dvc = segue.destination as! PetDetailsViewController
             let st = data[selectedRow]
-            dvc.student = st
+            dvc.pet = st
         }
     }
     

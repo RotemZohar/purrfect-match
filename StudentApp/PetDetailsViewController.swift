@@ -8,12 +8,12 @@
 import UIKit
 import Kingfisher
 
-class StudentDetailsViewController: UIViewController {
+class PetDetailsViewController: UIViewController {
     @IBOutlet weak var avatarImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     
-    var student:Student?{
+    var pet:Pet?{
         didSet{
             if(idLabel != nil){
                 updateDisplay()
@@ -22,9 +22,9 @@ class StudentDetailsViewController: UIViewController {
     }
     
     func updateDisplay(){
-        idLabel.text = student?.id
-        nameLabel.text = student?.name
-        if let urlStr = student?.avatarUrl {
+        idLabel.text = pet?.id
+        nameLabel.text = pet?.name
+        if let urlStr = pet?.avatarUrl {
             let url = URL(string: urlStr)
             avatarImg.kf.setImage(with: url)
         }
@@ -33,7 +33,7 @@ class StudentDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if student != nil {
+        if pet != nil {
             updateDisplay()
         }
     }
