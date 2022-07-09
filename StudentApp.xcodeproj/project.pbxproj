@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAAF286F34EB00072AFC /* Pet.swift */; };
+		84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */; };
+		84F1BAB4286F43DC00072AFC /* PetDao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */; };
 		94059182285A1B38004EAE59 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94059181285A1B38004EAE59 /* MapViewController.swift */; };
 		9413D98D282BF0AC00A31403 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98C282BF0AC00A31403 /* Model.swift */; };
 		9413D990282BF2D100A31403 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */; };
-		9413D9BE282C06AC00A31403 /* StudentDao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9BC282C06AC00A31403 /* StudentDao+CoreDataClass.swift */; };
-		9413D9BF282C06AC00A31403 /* StudentDao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9BD282C06AC00A31403 /* StudentDao+CoreDataProperties.swift */; };
-		9413D9C1282C06D200A31403 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9C0282C06D200A31403 /* Student.swift */; };
-		9413D9C3282C0B8200A31403 /* NewStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9C2282C0B8200A31403 /* NewStudentViewController.swift */; };
+		9413D9C3282C0B8200A31403 /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9C2282C0B8200A31403 /* NewPetViewController.swift */; };
 		941ED1D9284B7A87005C2F62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 941ED1D8284B7A87005C2F62 /* Alamofire */; };
 		9451152E283E77F400B96F7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9451152D283E77F400B96F7B /* Kingfisher */; };
 		94A9CE132850DB580099E1FF /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE122850DB580099E1FF /* StarWarsApi.swift */; };
@@ -32,19 +32,19 @@
 		CE52A24827FDCA1100C737CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE52A24627FDCA1100C737CE /* Main.storyboard */; };
 		CE52A24A27FDCA1200C737CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE52A24927FDCA1200C737CE /* Assets.xcassets */; };
 		CE52A24D27FDCA1200C737CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE52A24B27FDCA1200C737CE /* LaunchScreen.storyboard */; };
-		CE52A25527FDD24C00C737CE /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25427FDD24C00C737CE /* StudentsTableViewController.swift */; };
-		CE52A25727FDDE4D00C737CE /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25627FDDE4D00C737CE /* StudentTableViewCell.swift */; };
-		CE52A25927FDE4AB00C737CE /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25827FDE4AB00C737CE /* StudentDetailsViewController.swift */; };
+		CE52A25527FDD24C00C737CE /* PetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25427FDD24C00C737CE /* PetsTableViewController.swift */; };
+		CE52A25727FDDE4D00C737CE /* PetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25627FDDE4D00C737CE /* PetsTableViewCell.swift */; };
+		CE52A25927FDE4AB00C737CE /* PetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52A25827FDE4AB00C737CE /* PetDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84F1BAAF286F34EB00072AFC /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		94059181285A1B38004EAE59 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9413D98C282BF0AC00A31403 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9413D98F282BF2D100A31403 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		9413D9BC282C06AC00A31403 /* StudentDao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentDao+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9413D9BD282C06AC00A31403 /* StudentDao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentDao+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9413D9C0282C06D200A31403 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		9413D9C2282C0B8200A31403 /* NewStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudentViewController.swift; sourceTree = "<group>"; };
+		9413D9C2282C0B8200A31403 /* NewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
 		94A9CE122850DB580099E1FF /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
 		94A9CE142850E0500099E1FF /* SWFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFilm.swift; sourceTree = "<group>"; };
 		94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
@@ -59,9 +59,9 @@
 		CE52A24927FDCA1200C737CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE52A24C27FDCA1200C737CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE52A24E27FDCA1200C737CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE52A25427FDD24C00C737CE /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
-		CE52A25627FDDE4D00C737CE /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
-		CE52A25827FDE4AB00C737CE /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
+		CE52A25427FDD24C00C737CE /* PetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTableViewController.swift; sourceTree = "<group>"; };
+		CE52A25627FDDE4D00C737CE /* PetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTableViewCell.swift; sourceTree = "<group>"; };
+		CE52A25827FDE4AB00C737CE /* PetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +121,11 @@
 				CE52A24927FDCA1200C737CE /* Assets.xcassets */,
 				CE52A24B27FDCA1200C737CE /* LaunchScreen.storyboard */,
 				CE52A24E27FDCA1200C737CE /* Info.plist */,
-				CE52A25427FDD24C00C737CE /* StudentsTableViewController.swift */,
-				CE52A25627FDDE4D00C737CE /* StudentTableViewCell.swift */,
-				CE52A25827FDE4AB00C737CE /* StudentDetailsViewController.swift */,
+				CE52A25427FDD24C00C737CE /* PetsTableViewController.swift */,
+				CE52A25627FDDE4D00C737CE /* PetsTableViewCell.swift */,
+				CE52A25827FDE4AB00C737CE /* PetDetailsViewController.swift */,
 				9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */,
-				9413D9C2282C0B8200A31403 /* NewStudentViewController.swift */,
+				9413D9C2282C0B8200A31403 /* NewPetViewController.swift */,
 				94059181285A1B38004EAE59 /* MapViewController.swift */,
 			);
 			path = StudentApp;
@@ -134,11 +134,11 @@
 		CE52A25A27FDE53A00C737CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9413D9BC282C06AC00A31403 /* StudentDao+CoreDataClass.swift */,
-				9413D9BD282C06AC00A31403 /* StudentDao+CoreDataProperties.swift */,
 				9413D98C282BF0AC00A31403 /* Model.swift */,
-				9413D9C0282C06D200A31403 /* Student.swift */,
 				94DE86D428352F5A0072DD75 /* ModelFirebase.swift */,
+				84F1BAAF286F34EB00072AFC /* Pet.swift */,
+				84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */,
+				84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,22 +230,22 @@
 			files = (
 				CE52A24527FDCA1100C737CE /* ViewController.swift in Sources */,
 				94A9CE192850E8F10099E1FF /* StarWarsTableViewCell.swift in Sources */,
-				CE52A25727FDDE4D00C737CE /* StudentTableViewCell.swift in Sources */,
+				84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */,
+				CE52A25727FDDE4D00C737CE /* PetsTableViewCell.swift in Sources */,
 				CE52A24127FDCA1100C737CE /* AppDelegate.swift in Sources */,
-				9413D9C1282C06D200A31403 /* Student.swift in Sources */,
 				CE52A24327FDCA1100C737CE /* SceneDelegate.swift in Sources */,
-				CE52A25527FDD24C00C737CE /* StudentsTableViewController.swift in Sources */,
+				CE52A25527FDD24C00C737CE /* PetsTableViewController.swift in Sources */,
 				9413D990282BF2D100A31403 /* DataModel.xcdatamodeld in Sources */,
-				CE52A25927FDE4AB00C737CE /* StudentDetailsViewController.swift in Sources */,
-				9413D9BF282C06AC00A31403 /* StudentDao+CoreDataProperties.swift in Sources */,
-				9413D9C3282C0B8200A31403 /* NewStudentViewController.swift in Sources */,
+				CE52A25927FDE4AB00C737CE /* PetDetailsViewController.swift in Sources */,
+				9413D9C3282C0B8200A31403 /* NewPetViewController.swift in Sources */,
 				9413D98D282BF0AC00A31403 /* Model.swift in Sources */,
 				94A9CE132850DB580099E1FF /* StarWarsApi.swift in Sources */,
 				94059182285A1B38004EAE59 /* MapViewController.swift in Sources */,
 				94A9CE152850E0500099E1FF /* SWFilm.swift in Sources */,
 				94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */,
 				94DE86D528352F5A0072DD75 /* ModelFirebase.swift in Sources */,
-				9413D9BE282C06AC00A31403 /* StudentDao+CoreDataClass.swift in Sources */,
+				84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */,
+				84F1BAB4286F43DC00072AFC /* PetDao+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

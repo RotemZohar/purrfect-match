@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudentTableViewCell: UITableViewCell {
+class PetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

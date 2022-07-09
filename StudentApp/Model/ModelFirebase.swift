@@ -19,25 +19,25 @@ class ModelFirebase{
         
     }
     
-    func getAllStudents(since:Int64, completion:@escaping ([Student])->Void){
-        db.collection("Students").whereField("lastUpdated", isGreaterThanOrEqualTo: Timestamp(seconds: since, nanoseconds: 0)).getDocuments() { (querySnapshot, err) in
-            var students = [Student]()
+    func getAllPets(since:Int64, completion:@escaping ([Pet])->Void){
+        db.collection("Pets").whereField("lastUpdated", isGreaterThanOrEqualTo: Timestamp(seconds: since, nanoseconds: 0)).getDocuments() { (querySnapshot, err) in
+            var pets = [Pet]()
             if let err = err {
                 print("Error getting documents: \(err)")
-                completion(students)
+                completion(pets)
             } else {
                 for document in querySnapshot!.documents {
-                    let s = Student.FromJson(json: document.data())
-                    students.append(s)
+                    let s = Pet.FromJson(json: document.data())
+                    pets.append(s)
                 }
-                completion(students)
+                completion(pets)
             }
         }
     }
     
-    func add(student:Student, completion:@escaping ()->Void){
-        db.collection("Students").document(student.id!).setData(
-            student.toJson())
+    func add(pet:Pet, completion:@escaping ()->Void){
+        db.collection("Pets").document(pet.id!).setData(
+            pet.toJson())
         { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -48,11 +48,11 @@ class ModelFirebase{
         }
     }
     
-    func getStudent(byId:String)->Student?{
+    func getPet(byId:String)->Pet?{
         return nil
     }
     
-    func delete(student:Student){
+    func delete(pet:Pet){
         
     }
     

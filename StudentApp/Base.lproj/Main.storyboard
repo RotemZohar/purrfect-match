@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Students List-->
+        <!--Pets List-->
         <scene sceneID="aNJ-RV-FeX">
             <objects>
-                <tableViewController id="iW2-sY-j9r" customClass="StudentsTableViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="iW2-sY-j9r" customClass="PetsTableViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eVo-EA-zHV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" rowHeight="114" id="9co-Yv-FVZ" customClass="StudentTableViewCell" customModule="StudentApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="114" id="9co-Yv-FVZ" customClass="PetTableViewCell" customModule="StudentApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9co-Yv-FVZ" id="eFc-ty-iQX">
@@ -66,7 +66,7 @@
                             <outlet property="delegate" destination="iW2-sY-j9r" id="YoM-8V-uw5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Students List" id="gSj-2Z-GO9">
+                    <navigationItem key="navigationItem" title="Pets List" id="gSj-2Z-GO9">
                         <barButtonItem key="backBarButtonItem" title="List" id="hUg-Ks-tnK"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9r5-CY-sah">
                             <connections>
@@ -75,17 +75,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="eyb-kZ-Whz" kind="show" identifier="openStudentDetails" id="8fB-t0-qN5"/>
+                        <segue destination="eyb-kZ-Whz" kind="show" identifier="openPetDetails" id="8fB-t0-qN5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfK-DZ-Zip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="-1168.5267857142856"/>
         </scene>
-        <!--New student-->
+        <!--New pet-->
         <scene sceneID="P70-2h-Ym8">
             <objects>
-                <viewController id="HkU-vh-pns" customClass="NewStudentViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HkU-vh-pns" customClass="NewPetViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="76B-cW-gmQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,34 +95,41 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2J-vZ-kCd">
-                                <rect key="frame" x="20" y="372" width="374" height="45.5"/>
+                                <rect key="frame" x="20" y="346" width="374" height="45.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-N8-CbZ">
-                                <rect key="frame" x="20" y="436" width="374" height="45.5"/>
+                                <rect key="frame" x="20" y="399" width="374" height="45.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ml-iF-IPS">
-                                <rect key="frame" x="20" y="501" width="374" height="45.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-vQ-ih8" userLabel="Phone Tv">
+                                <rect key="frame" x="20" y="452" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9u-dy-L9Y">
-                                <rect key="frame" x="310" y="573" width="84" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWl-oO-Fmn" userLabel="Address Tv">
+                                <rect key="frame" x="20" y="494" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SAVE">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="save:" destination="HkU-vh-pns" eventType="touchUpInside" id="ewL-7x-WI0"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nlc-1d-9hY" userLabel="Breed Tv">
+                                <rect key="frame" x="20" y="536" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9G-4c-jAL" userLabel="Description Tv">
+                                <rect key="frame" x="20" y="578" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-G0-KpG">
                                 <rect key="frame" x="284" y="71" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -145,27 +152,41 @@
                                     <action selector="openGallery:" destination="HkU-vh-pns" eventType="touchUpInside" id="RtS-Aa-yDg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9u-dy-L9Y">
+                                <rect key="frame" x="310" y="620" width="84" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SAVE">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="HkU-vh-pns" eventType="touchUpInside" id="ewL-7x-WI0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OlJ-Pq-LGh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New student" id="63y-Uj-MEh"/>
+                    <navigationItem key="navigationItem" title="New pet" id="63y-Uj-MEh"/>
                     <connections>
                         <outlet property="activityIndicator" destination="H0w-G0-KpG" id="uoR-2t-5t5"/>
+                        <outlet property="addressTv" destination="CWl-oO-Fmn" id="w4f-6e-RPn"/>
                         <outlet property="avatarImgv" destination="oY2-V2-mBG" id="L9X-JA-7pb"/>
+                        <outlet property="breedTv" destination="Nlc-1d-9hY" id="6DV-Ox-XOp"/>
+                        <outlet property="descriptionTv" destination="Y9G-4c-jAL" id="3Ot-oR-Sey"/>
                         <outlet property="idTv" destination="a2J-vZ-kCd" id="0TX-Kk-AzF"/>
                         <outlet property="nameTv" destination="IGs-N8-CbZ" id="PUQ-dC-UWY"/>
-                        <outlet property="phoneTv" destination="9ml-iF-IPS" id="k9a-sL-LLa"/>
+                        <outlet property="phoneTv" destination="Xne-vQ-ih8" id="EGa-oq-ZV1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5Z-LH-MXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2369.5652173913045" y="-1841.5178571428571"/>
         </scene>
-        <!--Student-->
+        <!--Pet-->
         <scene sceneID="But-tF-Sk2">
             <objects>
-                <viewController id="eyb-kZ-Whz" customClass="StudentDetailsViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eyb-kZ-Whz" customClass="PetDetailsViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRA-08-tLU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,8 +227,8 @@
                         <viewLayoutGuide key="safeArea" id="H0p-mE-tG6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Student" id="EVb-pd-zXe">
-                        <barButtonItem key="backBarButtonItem" title="Student" id="SfG-Gy-bcI"/>
+                    <navigationItem key="navigationItem" title="Pet" id="EVb-pd-zXe">
+                        <barButtonItem key="backBarButtonItem" title="Pet" id="SfG-Gy-bcI"/>
                     </navigationItem>
                     <connections>
                         <outlet property="avatarImg" destination="RAQ-Ap-Glo" id="oht-Jc-eCW"/>
