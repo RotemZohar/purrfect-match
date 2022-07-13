@@ -1,5 +1,5 @@
 //
-//  StarWarsApi.swift
+//  DogApi.swift
 //  StudentApp
 //
 //  Created by Eliav Menachi on 08/06/2022.
@@ -10,10 +10,10 @@ import Alamofire
 
 
 
-class StarWarsApi{
+class DogApi{
     
     static func getFilms(onComplete:@escaping (SWFilms?)->Void){
-        AF.request("https://swapi.dev/api/films").responseDecodable(of:SWFilms.self){ response in
+        AF.request("https://api.thedogapi.com/v1/breeds?limit=10&page=0").responseDecodable(of:SWFilms.self){ response in
             switch response.result{
             case .success(let data):
                 print ("success")
