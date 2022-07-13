@@ -16,8 +16,8 @@
 		9413D9C3282C0B8200A31403 /* NewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D9C2282C0B8200A31403 /* NewPetViewController.swift */; };
 		941ED1D9284B7A87005C2F62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 941ED1D8284B7A87005C2F62 /* Alamofire */; };
 		9451152E283E77F400B96F7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9451152D283E77F400B96F7B /* Kingfisher */; };
-		94A9CE132850DB580099E1FF /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE122850DB580099E1FF /* StarWarsApi.swift */; };
-		94A9CE152850E0500099E1FF /* SWFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE142850E0500099E1FF /* SWFilm.swift */; };
+		94A9CE132850DB580099E1FF /* DogApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE122850DB580099E1FF /* DogApi.swift */; };
+		94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE142850E0500099E1FF /* DogBreed.swift */; };
 		94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */; };
 		94A9CE192850E8F10099E1FF /* StarWarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */; };
 		94DE86CA28352B0D0072DD75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */; };
@@ -45,8 +45,8 @@
 		9413D98C282BF0AC00A31403 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9413D98F282BF2D100A31403 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		9413D9C2282C0B8200A31403 /* NewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
-		94A9CE122850DB580099E1FF /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
-		94A9CE142850E0500099E1FF /* SWFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFilm.swift; sourceTree = "<group>"; };
+		94A9CE122850DB580099E1FF /* DogApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApi.swift; sourceTree = "<group>"; };
+		94A9CE142850E0500099E1FF /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
 		94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
 		94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTableViewCell.swift; sourceTree = "<group>"; };
 		94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 		94A9CE0F2850DA970099E1FF /* API */ = {
 			isa = PBXGroup;
 			children = (
-				94A9CE122850DB580099E1FF /* StarWarsApi.swift */,
-				94A9CE142850E0500099E1FF /* SWFilm.swift */,
+				94A9CE122850DB580099E1FF /* DogApi.swift */,
+				94A9CE142850E0500099E1FF /* DogBreed.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -239,9 +239,9 @@
 				CE52A25927FDE4AB00C737CE /* PetDetailsViewController.swift in Sources */,
 				9413D9C3282C0B8200A31403 /* NewPetViewController.swift in Sources */,
 				9413D98D282BF0AC00A31403 /* Model.swift in Sources */,
-				94A9CE132850DB580099E1FF /* StarWarsApi.swift in Sources */,
+				94A9CE132850DB580099E1FF /* DogApi.swift in Sources */,
 				94059182285A1B38004EAE59 /* MapViewController.swift in Sources */,
-				94A9CE152850E0500099E1FF /* SWFilm.swift in Sources */,
+				94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */,
 				94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */,
 				94DE86D528352F5A0072DD75 /* ModelFirebase.swift in Sources */,
 				84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */,
@@ -394,6 +394,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudentApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Purrfect Match";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -422,6 +423,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StudentApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Purrfect Match";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

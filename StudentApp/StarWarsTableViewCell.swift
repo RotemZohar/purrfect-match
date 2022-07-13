@@ -9,10 +9,10 @@ import UIKit
 
 class StarWarsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var director: UILabel!
-    @IBOutlet weak var episod: UILabel!
-    @IBOutlet weak var filmTitle: UILabel!
+    @IBOutlet weak var temperment: UILabel!
+    @IBOutlet weak var origin: UILabel!
+    @IBOutlet weak var lifeSpan: UILabel!
+    @IBOutlet weak var breedName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

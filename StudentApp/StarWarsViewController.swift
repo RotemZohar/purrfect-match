@@ -9,7 +9,7 @@ import UIKit
 
 class StarWarsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var data:[SWFilm] = [SWFilm]()
+    var data:[DogBreed] = [DogBreed]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,8 +24,8 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @objc func reload(){
         self.tableView.refreshControl?.beginRefreshing()
-        StarWarsApi.getFilms123 { films in
-            self.data = films
+        DogApi.getThreeBreeds { breeds in
+            self.data = breeds
             self.tableView.reloadData()
             self.tableView.refreshControl?.endRefreshing()
         }
@@ -49,11 +49,11 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SWCell", for: indexPath) as! StarWarsTableViewCell
         
-        let film = data[indexPath.row]
-        cell.filmTitle.text = film.title
-        cell.episod.text = "Episod: " + String(film.id)
-        cell.director.text = "Director: " + film.director
-        cell.date.text = "Date: " + film.releaseDate
+        let breed = data[indexPath.row]
+        cell.breedName.text = breed.name
+        cell.lifeSpan.text = "Life Span: " + breed.lifeSpan
+        cell.origin.text = "Origin: " + breed.origin
+        cell.temperment.text = "Temperment: " + breed.temperament
         return cell
     }
     
