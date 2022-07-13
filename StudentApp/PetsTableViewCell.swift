@@ -11,18 +11,18 @@ class PetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     
-    var id = "" {
+    var name = "" {
         didSet{
-            if(idLabel != nil){
-                idLabel.text = id
+            if(nameLabel != nil){
+                nameLabel.text = name
             }
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        idLabel.text = id
+        nameLabel.text = name
         // Initialization code
     }
 

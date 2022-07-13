@@ -56,7 +56,7 @@ class PetsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "petCell", for: indexPath) as! PetTableViewCell
         let st = data[indexPath.row]
         cell.nameLabel.text = st.name!
-        cell.id = st.id!
+        cell.descLabel.text = st.desc!
         if let urlStr = st.avatarUrl {
             let url = URL(string: urlStr)
             cell.avatar?.kf.setImage(with: url)
