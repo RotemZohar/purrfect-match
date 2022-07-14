@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StarWarsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DogBreedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var data:[DogBreed] = [DogBreed]()
     
@@ -47,7 +47,7 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SWCell", for: indexPath) as! StarWarsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SWCell", for: indexPath) as! DogBreedTableViewCell
         
         let breed = data[indexPath.row]
         cell.breedName.text = breed.name
