@@ -51,9 +51,9 @@ class StarWarsViewController: UIViewController, UITableViewDelegate, UITableView
         
         let breed = data[indexPath.row]
         cell.breedName.text = breed.name
-        cell.lifeSpan.text = "Life Span: " + breed.lifeSpan
-        cell.origin.text = "Origin: " + breed.origin
-        cell.temperment.text = "Temperment: " + breed.temperament
+        cell.lifeSpan.text = "Life Span: " + (breed.lifeSpan ?? "Unknown")
+        cell.origin.text = "Origin: " + (breed.origin ?? "Unknown")
+        cell.temperment.text = "Temperment: " + (breed.temperament ?? "Unknown")
         return cell
     }
     
