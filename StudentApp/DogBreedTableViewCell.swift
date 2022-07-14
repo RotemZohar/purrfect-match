@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StarWarsTableViewCell: UITableViewCell {
+class DogBreedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var temperment: UILabel!
     @IBOutlet weak var origin: UILabel!
