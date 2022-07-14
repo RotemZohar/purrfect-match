@@ -258,6 +258,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssU-Jv-RFv">
+                                <rect key="frame" x="272" y="102" width="43" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-NB-yB2">
+                                <rect key="frame" x="323" y="102" width="44" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H0p-mE-tG6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -413,11 +425,11 @@
             </objects>
             <point key="canvasLocation" x="3057.971014492754" y="361.60714285714283"/>
         </scene>
-        <!--Students-->
+        <!--Pets-->
         <scene sceneID="sd1-6L-5MN">
             <objects>
                 <navigationController id="bAI-UH-YT0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Students" image="studentdesk" catalog="system" id="szI-wS-8Fk"/>
+                    <tabBarItem key="tabBarItem" title="Pets" image="tortoise" catalog="system" id="szI-wS-8Fk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1lr-iA-tlh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -471,10 +483,12 @@
         <image name="avatar" width="100" height="100"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="smiley.fill" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="studentdesk" catalog="system" width="124" height="128"/>
+        <image name="tortoise" catalog="system" width="128" height="68"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -28,6 +28,7 @@ class ModelFirebase{
             } else {
                 for document in querySnapshot!.documents {
                     let s = Pet.FromJson(json: document.data())
+                    s.id = document.documentID
                     pets.append(s)
                 }
                 completion(pets)
@@ -36,7 +37,7 @@ class ModelFirebase{
     }
     
     func add(pet:Pet, completion:@escaping ()->Void){
-        db.collection("Pets").document(pet.id!).setData(
+        db.collection("Pets").document().setData(
             pet.toJson())
         { err in
             if let err = err {

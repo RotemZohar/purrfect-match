@@ -10,6 +10,7 @@
 		84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAAF286F34EB00072AFC /* Pet.swift */; };
 		84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */; };
 		84F1BAB4286F43DC00072AFC /* PetDao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */; };
+		84F711EC288085C9006E5FAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F711EB288085C9006E5FAA /* GoogleService-Info.plist */; };
 		94059182285A1B38004EAE59 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94059181285A1B38004EAE59 /* MapViewController.swift */; };
 		9413D98D282BF0AC00A31403 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98C282BF0AC00A31403 /* Model.swift */; };
 		9413D990282BF2D100A31403 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */; };
@@ -20,7 +21,6 @@
 		94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE142850E0500099E1FF /* DogBreed.swift */; };
 		94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */; };
 		94A9CE192850E8F10099E1FF /* StarWarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */; };
-		94DE86CA28352B0D0072DD75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */; };
 		94DE86CD28352D880072DD75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CC28352D880072DD75 /* FirebaseAnalytics */; };
 		94DE86CF28352D880072DD75 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CE28352D880072DD75 /* FirebaseAuth */; };
 		94DE86D128352D880072DD75 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86D028352D880072DD75 /* FirebaseFirestore */; };
@@ -41,6 +41,7 @@
 		84F1BAAF286F34EB00072AFC /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84F711EB288085C9006E5FAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94059181285A1B38004EAE59 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9413D98C282BF0AC00A31403 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9413D98F282BF2D100A31403 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		94A9CE142850E0500099E1FF /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
 		94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
 		94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTableViewCell.swift; sourceTree = "<group>"; };
-		94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94DE86D428352F5A0072DD75 /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
 		CE52A23D27FDCA1100C737CE /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE52A24027FDCA1100C737CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		CE52A23F27FDCA1100C737CE /* StudentApp */ = {
 			isa = PBXGroup;
 			children = (
+				84F711EB288085C9006E5FAA /* GoogleService-Info.plist */,
 				94A9CE0F2850DA970099E1FF /* API */,
-				94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */,
 				CE52A25A27FDE53A00C737CE /* Model */,
 				CE52A24027FDCA1100C737CE /* AppDelegate.swift */,
 				CE52A24227FDCA1100C737CE /* SceneDelegate.swift */,
@@ -215,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE52A24D27FDCA1200C737CE /* LaunchScreen.storyboard in Resources */,
-				94DE86CA28352B0D0072DD75 /* GoogleService-Info.plist in Resources */,
+				84F711EC288085C9006E5FAA /* GoogleService-Info.plist in Resources */,
 				CE52A24A27FDCA1200C737CE /* Assets.xcassets in Resources */,
 				CE52A24827FDCA1100C737CE /* Main.storyboard in Resources */,
 			);
@@ -406,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.menachi.StudentApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banana.PurrfectMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -435,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.menachi.StudentApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banana.PurrfectMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
