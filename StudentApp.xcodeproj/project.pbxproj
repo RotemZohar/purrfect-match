@@ -18,8 +18,8 @@
 		9451152E283E77F400B96F7B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9451152D283E77F400B96F7B /* Kingfisher */; };
 		94A9CE132850DB580099E1FF /* DogApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE122850DB580099E1FF /* DogApi.swift */; };
 		94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE142850E0500099E1FF /* DogBreed.swift */; };
-		94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */; };
-		94A9CE192850E8F10099E1FF /* StarWarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */; };
+		94A9CE172850E49D0099E1FF /* DogBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */; };
+		94A9CE192850E8F10099E1FF /* DogBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */; };
 		94DE86CA28352B0D0072DD75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */; };
 		94DE86CD28352D880072DD75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CC28352D880072DD75 /* FirebaseAnalytics */; };
 		94DE86CF28352D880072DD75 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CE28352D880072DD75 /* FirebaseAuth */; };
@@ -47,8 +47,8 @@
 		9413D9C2282C0B8200A31403 /* NewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPetViewController.swift; sourceTree = "<group>"; };
 		94A9CE122850DB580099E1FF /* DogApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApi.swift; sourceTree = "<group>"; };
 		94A9CE142850E0500099E1FF /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
-		94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
-		94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTableViewCell.swift; sourceTree = "<group>"; };
+		94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedViewController.swift; sourceTree = "<group>"; };
+		94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedTableViewCell.swift; sourceTree = "<group>"; };
 		94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94DE86D428352F5A0072DD75 /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
 		CE52A23D27FDCA1100C737CE /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,8 +116,8 @@
 				CE52A24227FDCA1100C737CE /* SceneDelegate.swift */,
 				CE52A24427FDCA1100C737CE /* ViewController.swift */,
 				CE52A24627FDCA1100C737CE /* Main.storyboard */,
-				94A9CE162850E49D0099E1FF /* StarWarsViewController.swift */,
-				94A9CE182850E8F10099E1FF /* StarWarsTableViewCell.swift */,
+				94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */,
+				94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */,
 				CE52A24927FDCA1200C737CE /* Assets.xcassets */,
 				CE52A24B27FDCA1200C737CE /* LaunchScreen.storyboard */,
 				CE52A24E27FDCA1200C737CE /* Info.plist */,
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE52A24527FDCA1100C737CE /* ViewController.swift in Sources */,
-				94A9CE192850E8F10099E1FF /* StarWarsTableViewCell.swift in Sources */,
+				94A9CE192850E8F10099E1FF /* DogBreedTableViewCell.swift in Sources */,
 				84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */,
 				CE52A25727FDDE4D00C737CE /* PetsTableViewCell.swift in Sources */,
 				CE52A24127FDCA1100C737CE /* AppDelegate.swift in Sources */,
@@ -242,7 +242,7 @@
 				94A9CE132850DB580099E1FF /* DogApi.swift in Sources */,
 				94059182285A1B38004EAE59 /* MapViewController.swift in Sources */,
 				94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */,
-				94A9CE172850E49D0099E1FF /* StarWarsViewController.swift in Sources */,
+				94A9CE172850E49D0099E1FF /* DogBreedViewController.swift in Sources */,
 				94DE86D528352F5A0072DD75 /* ModelFirebase.swift in Sources */,
 				84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */,
 				84F1BAB4286F43DC00072AFC /* PetDao+CoreDataProperties.swift in Sources */,

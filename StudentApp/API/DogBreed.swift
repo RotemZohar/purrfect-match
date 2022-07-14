@@ -8,13 +8,13 @@
 import Foundation
 
 struct DogBreed: Decodable {
-    let id: Int
-    let name: String
-    let bredFor: String
-    let breedGroup: String
-    let lifeSpan: String
-    let temperament: String
-    let origin: String
+    var id: Int? = 0
+    var name: String? = ""
+    var bredFor: String? = ""
+    var breedGroup: String? = ""
+    var lifeSpan: String? = ""
+    var temperament: String? = ""
+    var origin: String? = ""
 //    let weight: String
 //    let height: String
     
