@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84ABC7D12881D55400D68404 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABC7D02881D55400D68404 /* LoginViewController.swift */; };
 		84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAAF286F34EB00072AFC /* Pet.swift */; };
 		84F1BAB2286F43BA00072AFC /* PetDao+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */; };
 		84F1BAB4286F43DC00072AFC /* PetDao+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */; };
@@ -21,7 +22,6 @@
 		94A9CE152850E0500099E1FF /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE142850E0500099E1FF /* DogBreed.swift */; };
 		94A9CE172850E49D0099E1FF /* DogBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */; };
 		94A9CE192850E8F10099E1FF /* DogBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */; };
-		94DE86CA28352B0D0072DD75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */; };
 		94DE86CD28352D880072DD75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CC28352D880072DD75 /* FirebaseAnalytics */; };
 		94DE86CF28352D880072DD75 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86CE28352D880072DD75 /* FirebaseAuth */; };
 		94DE86D128352D880072DD75 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 94DE86D028352D880072DD75 /* FirebaseFirestore */; };
@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84ABC7D02881D55400D68404 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84F1BAAF286F34EB00072AFC /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		84F1BAB1286F43BA00072AFC /* PetDao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84F1BAB3286F43DC00072AFC /* PetDao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetDao+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		94A9CE142850E0500099E1FF /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
 		94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedViewController.swift; sourceTree = "<group>"; };
 		94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedTableViewCell.swift; sourceTree = "<group>"; };
-		94DE86C928352B0D0072DD75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94DE86D428352F5A0072DD75 /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
 		CE52A23D27FDCA1100C737CE /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE52A24027FDCA1100C737CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 				9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */,
 				9413D9C2282C0B8200A31403 /* NewPetViewController.swift */,
 				94059181285A1B38004EAE59 /* MapViewController.swift */,
+				84ABC7D02881D55400D68404 /* LoginViewController.swift */,
 			);
 			path = StudentApp;
 			sourceTree = "<group>";
@@ -234,6 +235,7 @@
 				94A9CE192850E8F10099E1FF /* DogBreedTableViewCell.swift in Sources */,
 				84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */,
 				CE52A25727FDDE4D00C737CE /* PetsTableViewCell.swift in Sources */,
+				84ABC7D12881D55400D68404 /* LoginViewController.swift in Sources */,
 				CE52A24127FDCA1100C737CE /* AppDelegate.swift in Sources */,
 				CE52A24327FDCA1100C737CE /* SceneDelegate.swift in Sources */,
 				CE52A25527FDD24C00C737CE /* PetsTableViewController.swift in Sources */,
