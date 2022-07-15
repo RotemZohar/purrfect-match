@@ -64,7 +64,56 @@ public class PetDao: NSManagedObject {
     }
     
     static func delete(pet:Pet){
+        guard let context = context else {
+            return
+        }
         
+        let fetchReq = PetDao.fetchRequest()
+        
+        do{
+            let petsDao = try context.fetch(fetchReq)
+            for petDao in petsDao {
+                if (pet.id == petDao.id)
+                {
+                    context.delete(petDao)
+                }
+            }
+                
+            }catch let error as NSError{
+            print("Pet fetch error \(error) \(error.userInfo)")
+        }
+            
+        do{
+            try context.save()
+        }catch let error as NSError{
+            print("pet delete error \(error) \(error.userInfo)")
+        }
+        Model.petDataNotification.post()
+    }
+    
+    static func update(pet:Pet){
+        guard let context = context else {
+            return
+        }
+        
+        let fetchReq = PetDao.fetchRequest()
+        fetchReq.predicate = NSPredicate.init(format: "id == \(pet.id)")
+        
+        do{
+            let petsDao = try context.fetch(fetchReq)
+            for petDao in petsDao {
+                //context.updatedObjects({})
+            }
+        }catch let error as NSError{
+            print("Pet update error \(error) \(error.userInfo)")
+        }
+            
+        do{
+            try context.save()
+        }catch let error as NSError{
+            print("pet add error \(error) \(error.userInfo)")
+        }
+        Model.petDataNotification.post()
     }
     
     static func localLastUpdated() -> Int64{
