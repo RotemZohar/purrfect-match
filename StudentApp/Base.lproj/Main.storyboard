@@ -490,25 +490,30 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-7O-QMK">
-                                <rect key="frame" x="311" y="88" width="83" height="39"/>
+                                <rect key="frame" x="338" y="88" width="56" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Search"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system"/>
                                 <connections>
                                     <action selector="onSearchLocation:" destination="wmM-Th-tgg" eventType="touchUpInside" id="aCn-v1-cnl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zca-yK-Jw6">
-                                <rect key="frame" x="34" y="88" width="269" height="34"/>
+                                <rect key="frame" x="34" y="88" width="296" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5y-MP-tPN">
-                                <rect key="frame" x="154" y="809" width="107" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXZ-tM-rAS">
+                                <rect key="frame" x="155" y="771" width="105" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSaveClick:" destination="wmM-Th-tgg" eventType="touchUpInside" id="Iui-RN-mhN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DpG-JJ-VP7"/>
@@ -517,14 +522,14 @@
                     <navigationItem key="navigationItem" id="sdB-Ia-A7s"/>
                     <connections>
                         <outlet property="mapView" destination="yWc-G8-2O5" id="lSB-V5-L7Z"/>
-                        <outlet property="saveBtn" destination="K5y-MP-tPN" id="McV-pz-Pba"/>
+                        <outlet property="saveBtn" destination="SXZ-tM-rAS" id="1O0-8D-jHk"/>
                         <outlet property="searchBtn" destination="hwZ-7O-QMK" id="fWN-ob-uM6"/>
                         <outlet property="searchText" destination="zca-yK-Jw6" id="q4m-bl-OeM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbY-Rw-4j3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3555" y="-1842"/>
+            <point key="canvasLocation" x="3553.6231884057975" y="-1842.1875"/>
         </scene>
     </scenes>
     <resources>
@@ -532,6 +537,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>

@@ -54,6 +54,10 @@ class MapSearchController: UIViewController, MKMapViewDelegate {
         }
         
     }
+    
+    @IBAction func onSaveClick(_ sender: Any) {
+    }
+    
     // Current location
     private func configureLocationServices() {
         locationManager.delegate = self
