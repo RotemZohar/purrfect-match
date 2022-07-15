@@ -62,6 +62,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     private let locationManager = CLLocationManager()
+    private var currentLocationCoor: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,9 +150,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if status == .notDetermined{
             locationManager.requestWhenInUseAuthorization()
         } else if status == .authorizedAlways || status == .authorizedWhenInUse{
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
+            beginLocationUpdates(locationManager: locationManager)
         }
+    }
+    
+    private func beginLocationUpdates(locationManager: CLLocationManager){
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        
+        mapView.setRegion(region, animated: true)
     }
     
 }
@@ -159,11 +171,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
 extension MapViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("aaa")
+
+        guard let latestLocation = locations.first else {return}
+        
+        if currentLocationCoor == nil {
+            zoomToLatestLocation(with: latestLocation.coordinate)
+        }
+        
+        currentLocationCoor = latestLocation.coordinate
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("bbb")
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+            beginLocationUpdates(locationManager: manager)
+        }
     }
 }
 
