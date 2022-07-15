@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>199196051155-bt6hmpmfm29gm0d3pi8pubbtfnb02ha0.apps.googleusercontent.com</string>
+	<string>132577293778-jgv5ndnmfnlukb7598ut5q0i2e9v3l2a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.199196051155-bt6hmpmfm29gm0d3pi8pubbtfnb02ha0</string>
+	<string>com.googleusercontent.apps.132577293778-jgv5ndnmfnlukb7598ut5q0i2e9v3l2a</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBUMdI-ksl-WDlyTnH1D-sVOTkLBHLYA8E</string>
+	<string>AIzaSyBabwy13n6bFN4WXofIFctSrxWQRsOI8rI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>199196051155</string>
+	<string>132577293778</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.menachi.StudentApp</string>
+	<string>com.banana.PurrfectMatch</string>
 	<key>PROJECT_ID</key>
-	<string>android2021a</string>
+	<string>purrfect-match-b6534</string>
 	<key>STORAGE_BUCKET</key>
-	<string>android2021a.appspot.com</string>
+	<string>purrfect-match-b6534.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:199196051155:ios:2afebc3bf4ce99ceaf3626</string>
+	<string>1:132577293778:ios:711ac8db6c852f3979440b</string>
 </dict>
 </plist>

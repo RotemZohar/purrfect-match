@@ -33,7 +33,6 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         let pet = Pet()
-        pet.id = idTv.text
         pet.name = nameTv.text
         pet.phone = phoneTv.text
         pet.address = addressTv.text
