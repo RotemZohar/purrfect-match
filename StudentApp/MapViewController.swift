@@ -13,7 +13,7 @@ class MyAnnotation: NSObject, MKAnnotation{
     let title: String?
     let subtitle: String?
     let type: String
-    
+    // TODO: add on click some	how
     init(coordinate: CLLocationCoordinate2D,
          title: String, subtitle:String, type: String){
         self.coordinate = coordinate
@@ -22,6 +22,7 @@ class MyAnnotation: NSObject, MKAnnotation{
         self.type = type
     }
     
+    // TODO: delete this
     var markerTintColor: UIColor  {
         switch type {
         case "CLASS":
@@ -60,22 +61,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    private let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureLocationServices()
         
         mapView.delegate = self
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
         
-        
+        // TODO: change to current location
         let center = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.771442)
         
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 100, longitudinalMeters: 100)
         
         mapView.setRegion(region, animated: true)
         
-        
+        // TODO: add pets locations
         let loc1 = MyAnnotation(coordinate: center, title: "Computer Science", subtitle: "ios class", type: "LAB")
         
         let lo2 = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442)
@@ -86,7 +91,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         createLine()
     }
     
-    
+    // TODO: delete this I think
     func createLine(){
         let locations = [CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442),
                          CLLocationCoordinate2D(latitude: 31.958965, longitude: 34.770455),
@@ -134,6 +139,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         polyRender.lineWidth = 8
         return polyRender
     }
+    
+    // Current location
+    private func configureLocationServices() {
+        locationManager.delegate = self
+        
+        let status = CLLocationManager.authorizationStatus()
+        
+        if status == .notDetermined{
+            locationManager.requestWhenInUseAuthorization()
+        } else if status == .authorizedAlways || status == .authorizedWhenInUse{
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
 }
 
+
+extension MapViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("aaa")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("bbb")
+    }
+}
 
