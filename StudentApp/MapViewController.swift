@@ -74,12 +74,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
         
-        // TODO: change to current location
+        // TODO: Delete this
         let center = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.771442)
-        
-        let region = MKCoordinateRegion(center: center, latitudinalMeters: 100, longitudinalMeters: 100)
-        
-        mapView.setRegion(region, animated: true)
         
         // TODO: add pets locations
         let loc1 = MyAnnotation(coordinate: center, title: "Computer Science", subtitle: "ios class", type: "LAB")
@@ -89,7 +85,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.addAnnotations([loc1,loc2])
         
-        createLine()
+//        createLine()
     }
     
     // TODO: delete this I think
