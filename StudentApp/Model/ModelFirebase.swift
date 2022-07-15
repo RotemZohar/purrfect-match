@@ -49,12 +49,31 @@ class ModelFirebase{
         }
     }
     
+    func update(pet:Pet, completion:@escaping ()->Void){
+        db.collection("Pets").document(pet.id!).setData(
+            pet.toJson())
+        { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document updated with")
+            }
+            completion()
+        }
+    }
     func getPet(byId:String)->Pet?{
         return nil
     }
     
-    func delete(pet:Pet){
-        
+    func delete(pet:Pet, completion:@escaping ()->Void){
+        db.collection("Pets").document(pet.id!).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+            completion()
+        }
     }
     
     

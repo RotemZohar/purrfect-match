@@ -16,6 +16,15 @@ class PetDetailsViewController: UIViewController {
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBAction func onDelete(_ sender: Any) {
+        if (pet != nil) {
+            Model.instance.delete(pet: pet!) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
     var pet:Pet?{
         didSet{
             if(nameLabel != nil){

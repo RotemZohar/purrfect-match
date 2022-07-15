@@ -60,7 +60,6 @@ class Model{
                 //update the local last update date
                 PetDao.setLocalLastUpdated(date: lup)
                 
-//                sleep(5)
                 DispatchQueue.main.async {
                     //return all records to caller
                     completion(PetDao.getAllPets())
@@ -80,8 +79,12 @@ class Model{
         return firebaseModel.getPet(byId: byId)
     }
     
-    func delete(pet:Pet){
-        firebaseModel.delete(pet: pet)
+    func delete(pet:Pet, completion:@escaping ()->Void){
+        firebaseModel.delete(pet: pet){
+            PetDao.delete(pet: pet)
+            completion()
+            Model.petDataNotification.post()
+        }
     }
     
     func uploadImage(name:String, image:UIImage, callback:@escaping(_ url:String)->Void){
