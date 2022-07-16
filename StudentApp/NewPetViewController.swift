@@ -20,7 +20,6 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var phoneTv: UITextField!
     @IBOutlet weak var nameTv: UITextField!
-    @IBOutlet weak var idTv: UITextField!
     @IBOutlet weak var addressTv: UITextField!
     @IBOutlet weak var breedTv: UITextField!
     @IBOutlet weak var descriptionTv: UITextField!

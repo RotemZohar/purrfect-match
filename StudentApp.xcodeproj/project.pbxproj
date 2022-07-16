@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F07B7C2881B30E00128BD6 /* EditPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F07B7B2881B30E00128BD6 /* EditPetViewController.swift */; };
 		84ABC7D12881D55400D68404 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABC7D02881D55400D68404 /* LoginViewController.swift */; };
 		84ABC7D32881FEB100D68404 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABC7D22881FEB100D68404 /* SignUpViewController.swift */; };
 		84ABC7DD288353C100D68404 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABC7DC288353C100D68404 /* Defaults.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84F07B7B2881B30E00128BD6 /* EditPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetViewController.swift; sourceTree = "<group>"; };
 		84ABC7D02881D55400D68404 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84ABC7D22881FEB100D68404 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84ABC7DC288353C100D68404 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				9413D98E282BF2D100A31403 /* DataModel.xcdatamodeld */,
 				9413D9C2282C0B8200A31403 /* NewPetViewController.swift */,
 				94059181285A1B38004EAE59 /* MapViewController.swift */,
+				84F07B7B2881B30E00128BD6 /* EditPetViewController.swift */,
 				84ABC7D02881D55400D68404 /* LoginViewController.swift */,
 				84ABC7D22881FEB100D68404 /* SignUpViewController.swift */,
 			);
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F07B7C2881B30E00128BD6 /* EditPetViewController.swift in Sources */,
 				CE52A24527FDCA1100C737CE /* ViewController.swift in Sources */,
 				94A9CE192850E8F10099E1FF /* DogBreedTableViewCell.swift in Sources */,
 				84F1BAB0286F34EB00072AFC /* Pet.swift in Sources */,
