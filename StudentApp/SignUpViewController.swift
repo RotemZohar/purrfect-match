@@ -52,6 +52,11 @@ class SignUpViewController: UIViewController {
             // TODO: if yes, add error notif
             
             // TODO: if not, save user & nav to login
+            performSegue(withIdentifier: "UserCreatedSegue", sender: self)
         }
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

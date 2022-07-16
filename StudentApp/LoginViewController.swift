@@ -37,6 +37,8 @@ class LoginViewController: UIViewController {
             // TODO: check if user exist
             
             // TODO: if yes, navigate to app
+            performSegue(withIdentifier: "LoginSegue", sender: self)
+
             
             // TODO: if not, add error notif
         }
