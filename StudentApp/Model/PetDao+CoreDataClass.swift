@@ -51,6 +51,8 @@ public class PetDao: NSManagedObject {
         p.address = pet.address
         p.breed = pet.breed
         p.user = pet.user
+        p.longtitude = pet.longtitude as NSNumber?
+        p.latitude = pet.latitude as NSNumber?
         
         do{
             try context.save()

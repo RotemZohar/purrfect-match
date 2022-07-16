@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -24,10 +25,13 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet weak var breedTv: UITextField!
     @IBOutlet weak var descriptionTv: UITextField!
     @IBOutlet weak var avatarImgv: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
     }
+    
+    var addressCoor: CLLocationCoordinate2D?
     
     @IBAction func save(_ sender: Any) {
         activityIndicator.isHidden = false
@@ -38,6 +42,8 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         pet.address = addressTv.text
         pet.breed = breedTv.text
         pet.desc = descriptionTv.text
+        pet.longtitude = addressCoor?.longitude
+        pet.latitude = addressCoor?.latitude
         pet.user = "yba@gmail.com" // TODO: temporary, remove later
         if let image = selectedImage{
             Model.instance.uploadImage(name: pet.id!, image: image) { url in
@@ -75,14 +81,18 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         
     }
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+         if segue.identifier == "searchMapSegue" {
+             let dvc = segue.destination as! MapSearchController
+             if addressCoor != nil{
+                 dvc.search = Search(text: addressTv.text ?? "", coor: addressCoor)
+             }
+         }
      }
-     */
+     
     
 }
