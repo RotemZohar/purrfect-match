@@ -97,7 +97,7 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
     }
     
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
         
         mapView.setRegion(region, animated: true)
     }
