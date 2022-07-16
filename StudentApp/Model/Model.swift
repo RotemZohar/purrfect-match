@@ -90,4 +90,22 @@ class Model{
     func uploadImage(name:String, image:UIImage, callback:@escaping(_ url:String)->Void){
         firebaseModel.uploadImage(name: name, image: image, callback: callback)
     }
+    
+    func checkUserValid(email:String, password:String, completion:@escaping (Bool)->Void){
+        firebaseModel.checkUser(email: email, password: password) {Bool in
+            completion(Bool)
+        }
+    }
+    
+    func checkEmailValid(email:String, completion:@escaping (Bool)->Void){
+        firebaseModel.checkEmail(email: email) {Bool in
+            completion(Bool)
+        }
+    }
+    
+    func addUser(name:String, email:String, password:String, completion:@escaping ()->Void){
+        firebaseModel.addUser(name: name, email: email, password: password){
+            completion()
+        }
+    }
 }
