@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
             // check if user exist
             Model.instance.checkUserValid(email: email!, password: password!) { [self] isValid in
                 if (isValid) {
+                    Defaults.save(email: email!, password: password!)
                     performSegue(withIdentifier: "LoginSegue", sender: self)
                 } else {
                     errorLabel.text = "User or password is incorrect"

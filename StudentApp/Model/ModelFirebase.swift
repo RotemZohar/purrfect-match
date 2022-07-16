@@ -134,8 +134,7 @@ class ModelFirebase{
         db.collection("Users").document().setData([
             "name": name,
             "email": email,
-            "password": password,
-            "pets": []])
+            "password": password])
         { err in
             if let err = err {
                 print("Error adding user: \(err)")
