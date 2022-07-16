@@ -10,7 +10,7 @@ import MapKit
 import SwiftUI
 
 
-class MapSearchController: UIViewController, MKMapViewDelegate {
+class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -27,6 +27,8 @@ class MapSearchController: UIViewController, MKMapViewDelegate {
         configureLocationServices()
         
         mapView.delegate = self
+        
+        navigationController?.delegate = self
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
@@ -55,7 +57,8 @@ class MapSearchController: UIViewController, MKMapViewDelegate {
         
     }
     
-    @IBAction func onSaveClick(_ sender: Any) {
+    @IBAction func onSave(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     // Current location
@@ -82,6 +85,10 @@ class MapSearchController: UIViewController, MKMapViewDelegate {
         
         mapView.setRegion(region, animated: true)
     }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        (viewController as? NewPetViewController)?.addressTv.text = searchText.text
+    }
 }
 
 
@@ -102,4 +109,6 @@ extension MapSearchController: CLLocationManagerDelegate{
             beginLocationUpdates(locationManager: manager)
         }
     }
+    
+   
 }
