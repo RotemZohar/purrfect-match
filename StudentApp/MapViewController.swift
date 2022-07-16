@@ -12,26 +12,14 @@ class MyAnnotation: NSObject, MKAnnotation{
     let coordinate: CLLocationCoordinate2D
     let title: String?
     let subtitle: String?
-    let type: String
+    let pet: Pet?
     // TODO: add on click some	how
     init(coordinate: CLLocationCoordinate2D,
-         title: String, subtitle:String, type: String){
+         title: String, subtitle:String, pet: Pet){
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle
-        self.type = type
-    }
-    
-    // TODO: delete this
-    var markerTintColor: UIColor  {
-        switch type {
-        case "CLASS":
-            return .red
-        case "LAB":
-            return .cyan
-        default:
-            return .green
-        }
+        self.pet = pet
     }
 }
 
@@ -45,12 +33,9 @@ class MyAnnotationView: MKMarkerAnnotationView{
             canShowCallout = true
             calloutOffset = CGPoint(x: -5, y: 5)
             rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            
-            markerTintColor = myAnno.markerTintColor
-            //            if let letter = myAnno.type.first {
-            //                glyphText = String(letter)
-            //            }
-            glyphImage = UIImage(named: "icons8-apple-logo-30")
+            glyphText = myAnno.pet?.name
+            // TODO: maybe load pet image
+//            glyphImage = UIImage(named: "icons8-apple-logo-30")
         }
     }
 }
@@ -58,6 +43,9 @@ class MyAnnotationView: MKMarkerAnnotationView{
 
 
 class MapViewController: UIViewController, MKMapViewDelegate {
+    
+    var data = [Pet]()
+    var selectedPet: Pet?
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -73,37 +61,22 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
-        
-        // TODO: Delete this
-        let center = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.771442)
-        
-        // TODO: add pets locations
-        let loc1 = MyAnnotation(coordinate: center, title: "Computer Science", subtitle: "ios class", type: "LAB")
-        
-        let lo2 = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442)
-        let loc2 = MyAnnotation(coordinate: lo2, title: "Computer Science", subtitle: "android class", type: "AND")
-        
-        mapView.addAnnotations([loc1,loc2])
-        
-//        createLine()
+        loadAnnotations()
     }
     
-    // TODO: delete this I think
-    func createLine(){
-        let locations = [CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442),
-                         CLLocationCoordinate2D(latitude: 31.958965, longitude: 34.770455),
-                         CLLocationCoordinate2D(latitude: 31.958975, longitude: 34.770455),
-                         CLLocationCoordinate2D(latitude: 31.958985, longitude: 34.770455),
-                         CLLocationCoordinate2D(latitude: 31.958995, longitude: 34.770455),
-                         CLLocationCoordinate2D(latitude: 31.959995, longitude: 34.770465),
-                         CLLocationCoordinate2D(latitude: 31.958995, longitude: 34.770475),
-                         CLLocationCoordinate2D(latitude: 31.958999, longitude: 34.770485),
-                         CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.771442)]
-        
-        let polyline = MKPolyline(coordinates: locations, count: locations.count)
-        
-        mapView.addOverlay(polyline)
-        
+    func loadAnnotations() {
+        Model.instance.getAllPets(){
+            pets in
+            self.data = pets
+            
+            for pet in pets {
+                if (pet.latitude != 0 && pet.longtitude != 0) && (pet.latitude != nil && pet.longtitude != nil){
+                    let coor = CLLocationCoordinate2D(latitude: pet.latitude!, longitude: pet.longtitude!)
+                    let ann = MyAnnotation(coordinate: coor, title: pet.name ?? "Pet", subtitle: "", pet: pet)
+                    self.mapView.addAnnotation(ann)
+                }
+            }
+        }
     }
     
     
@@ -126,8 +99,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         guard let annotation = annotationView.annotation as? MyAnnotation else{
             return
         }
+        selectedPet = annotation.pet
+        performSegue(withIdentifier: "ShowPetDetailsFromMap", sender: self)
         NSLog("annotation accessort click:  \(annotation.subtitle)")
         
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShowPetDetailsFromMap"){
+            let dvc = segue.destination as! PetDetailsViewController
+            
+            dvc.pet = selectedPet
+        }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
@@ -157,7 +141,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 100000, longitudinalMeters: 100000)
         
         mapView.setRegion(region, animated: true)
     }
