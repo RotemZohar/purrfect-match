@@ -13,13 +13,11 @@ class MyAnnotation: NSObject, MKAnnotation{
     let title: String?
     let subtitle: String?
     let pet: Pet?
-    // TODO: add on click some	how
-    init(coordinate: CLLocationCoordinate2D,
-         title: String, subtitle:String, pet: Pet){
+    init(coordinate: CLLocationCoordinate2D, pet: Pet){
         self.coordinate = coordinate
-        self.title = title
-        self.subtitle = subtitle
         self.pet = pet
+        self.title = pet.name
+        self.subtitle = pet.desc
     }
 }
 
@@ -60,7 +58,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
-        
+        Model.petDataNotification.observe {
+            self.loadAnnotations()
+        }
         loadAnnotations()
     }
     
@@ -72,7 +72,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             for pet in pets {
                 if (pet.latitude != 0 && pet.longtitude != 0) && (pet.latitude != nil && pet.longtitude != nil){
                     let coor = CLLocationCoordinate2D(latitude: pet.latitude!, longitude: pet.longtitude!)
-                    let ann = MyAnnotation(coordinate: coor, title: pet.name ?? "Pet", subtitle: "", pet: pet)
+                    let ann = MyAnnotation(coordinate: coor, pet: pet)
                     self.mapView.addAnnotation(ann)
                 }
             }
@@ -101,7 +101,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         selectedPet = annotation.pet
         performSegue(withIdentifier: "ShowPetDetailsFromMap", sender: self)
-        NSLog("annotation accessort click:  \(annotation.subtitle)")
         
     }
     
@@ -109,7 +108,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ShowPetDetailsFromMap"){
             let dvc = segue.destination as! PetDetailsViewController
-            
             dvc.pet = selectedPet
         }
     }
