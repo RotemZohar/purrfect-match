@@ -13,7 +13,7 @@ class MyAnnotation: NSObject, MKAnnotation{
     let title: String?
     let subtitle: String?
     let type: String
-    
+    // TODO: add on click some	how
     init(coordinate: CLLocationCoordinate2D,
          title: String, subtitle:String, type: String){
         self.coordinate = coordinate
@@ -22,6 +22,7 @@ class MyAnnotation: NSObject, MKAnnotation{
         self.type = type
     }
     
+    // TODO: delete this
     var markerTintColor: UIColor  {
         switch type {
         case "CLASS":
@@ -60,22 +61,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    private let locationManager = CLLocationManager()
+    private var currentLocationCoor: CLLocationCoordinate2D?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureLocationServices()
         
         mapView.delegate = self
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
         
-        
+        // TODO: Delete this
         let center = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.771442)
         
-        let region = MKCoordinateRegion(center: center, latitudinalMeters: 100, longitudinalMeters: 100)
-        
-        mapView.setRegion(region, animated: true)
-        
-        
+        // TODO: add pets locations
         let loc1 = MyAnnotation(coordinate: center, title: "Computer Science", subtitle: "ios class", type: "LAB")
         
         let lo2 = CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442)
@@ -83,10 +85,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.addAnnotations([loc1,loc2])
         
-        createLine()
+//        createLine()
     }
     
-    
+    // TODO: delete this I think
     func createLine(){
         let locations = [CLLocationCoordinate2D(latitude: 31.970669, longitude: 34.772442),
                          CLLocationCoordinate2D(latitude: 31.958965, longitude: 34.770455),
@@ -134,6 +136,51 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         polyRender.lineWidth = 8
         return polyRender
     }
+    
+    // Current location
+    private func configureLocationServices() {
+        locationManager.delegate = self
+        
+        let status = CLLocationManager.authorizationStatus()
+        
+        if status == .notDetermined{
+            locationManager.requestWhenInUseAuthorization()
+        } else if status == .authorizedAlways || status == .authorizedWhenInUse{
+            beginLocationUpdates(locationManager: locationManager)
+        }
+    }
+    
+    private func beginLocationUpdates(locationManager: CLLocationManager){
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D){
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        
+        mapView.setRegion(region, animated: true)
+    }
+    
 }
 
+
+extension MapViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        guard let latestLocation = locations.first else {return}
+        
+        if currentLocationCoor == nil {
+            zoomToLatestLocation(with: latestLocation.coordinate)
+        }
+        
+        currentLocationCoor = latestLocation.coordinate
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+            beginLocationUpdates(locationManager: manager)
+        }
+    }
+}
 
