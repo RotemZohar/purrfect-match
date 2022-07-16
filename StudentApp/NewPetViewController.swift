@@ -20,7 +20,6 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var phoneTv: UITextField!
     @IBOutlet weak var nameTv: UITextField!
-    @IBOutlet weak var idTv: UITextField!
     @IBOutlet weak var addressTv: UITextField!
     @IBOutlet weak var breedTv: UITextField!
     @IBOutlet weak var descriptionTv: UITextField!
@@ -42,9 +41,9 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         pet.address = addressTv.text
         pet.breed = breedTv.text
         pet.desc = descriptionTv.text
+        pet.user = Defaults.getUserInfo().email
         pet.longtitude = addressCoor?.longitude
         pet.latitude = addressCoor?.latitude
-        pet.user = "yba@gmail.com" // TODO: temporary, remove later
         if let image = selectedImage{
             Model.instance.uploadImage(name: pet.id!, image: image) { url in
                 pet.avatarUrl = url
