@@ -97,11 +97,16 @@ class ModelFirebase{
             .whereField("password", isEqualTo: password)
             .getDocuments() { (snapshot, err) in
             if let err = err {
-                print("Check user or password: \(err)")
+                print("Error getting documents: \(err)")
                 completion(false)
             } else {
-                print("Loggin in...")
-                completion(true)
+                if(snapshot!.documents.isEmpty) {
+                    print("User doesnt exist")
+                    completion(false)
+                } else {
+                    print("Loggin in...")
+                    completion(true)
+                }
             }
         }
     }
@@ -111,11 +116,16 @@ class ModelFirebase{
             .whereField("email", isEqualTo: email)
             .getDocuments() { (snapshot, err) in
             if let err = err {
-                print("Email doesnt exist: \(err)")
-                completion(false)
-            } else {
-                print("Email exist")
+                print("Error getting documents: \(err)")
                 completion(true)
+            } else {
+                if(snapshot!.documents.isEmpty) {
+                    print("Email doesnt exist")
+                    completion(false)
+                } else {
+                    print("Email exist")
+                    completion(true)
+                }
             }
         }
     }
