@@ -42,6 +42,8 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         pet.address = addressTv.text
         pet.breed = breedTv.text
         pet.desc = descriptionTv.text
+        pet.longtitude = addressCoor?.longitude
+        pet.latitude = addressCoor?.latitude
         pet.user = "yba@gmail.com" // TODO: temporary, remove later
         if let image = selectedImage{
             Model.instance.uploadImage(name: pet.id!, image: image) { url in

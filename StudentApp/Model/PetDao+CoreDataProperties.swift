@@ -23,6 +23,8 @@ extension PetDao {
     @NSManaged public var address: String?
     @NSManaged public var breed: String?
     @NSManaged public var user: String?
+    @NSManaged public var longtitude: NSNumber?
+    @NSManaged public var latitude: NSNumber?
     @NSManaged public var lastUpdated: Int64
 
 }
