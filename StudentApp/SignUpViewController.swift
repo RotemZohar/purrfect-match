@@ -47,12 +47,18 @@ class SignUpViewController: UIViewController {
             activityIndicator.isHidden = true
             
         } else {
-            // TODO: check if user exist
-            
-            // TODO: if yes, add error notif
-            
-            // TODO: if not, save user & nav to login
-            performSegue(withIdentifier: "UserCreatedSegue", sender: self)
+            Model.instance.checkEmailValid(email: email!) { [self] emailExists in
+                if (emailExists){
+                    signupErrorLabel.text = "Email address already exists"
+                    signupErrorLabel.isHidden = false
+                    activityIndicator.isHidden = true
+                    
+                } else {
+                    Model.instance.addUser(name: name!, email: email!, password: password!) { [self] in
+                        performSegue(withIdentifier: "UserCreatedSegue", sender: self)
+                    }
+                }
+            }
         }
     }
     
