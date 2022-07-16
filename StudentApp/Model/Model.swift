@@ -30,10 +30,10 @@ class ModelNotificatiponBase{
 }
 class Model{
     let firebaseModel = ModelFirebase()
-    let dispatchQueue = DispatchQueue(label: "com.studentapp")
+    let dispatchQueue = DispatchQueue(label: "com.studentapp") // TODO: FIX
 
     // Notification center
-    static let petDataNotification = ModelNotificatiponBase("com.menachi.studentDataNotification") // TODO: FIX?
+    static let petDataNotification = ModelNotificatiponBase("com.menachi.studentDataNotification") // TODO: FIX
     
     private init(){
        
@@ -87,6 +87,12 @@ class Model{
         }
     }
     
+    func update(pet:Pet, completion:@escaping ()->Void){
+        firebaseModel.update(pet: pet){
+            completion()
+            Model.petDataNotification.post()
+        }
+    }
     func uploadImage(name:String, image:UIImage, callback:@escaping(_ url:String)->Void){
         firebaseModel.uploadImage(name: name, image: image, callback: callback)
     }

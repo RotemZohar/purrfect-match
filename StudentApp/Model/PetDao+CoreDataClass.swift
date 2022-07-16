@@ -27,7 +27,7 @@ public class PetDao: NSManagedObject {
             let petsDao = try context.fetch(PetDao.fetchRequest())
             var petArray:[Pet] = []
             for petDao in petsDao{
-                petArray.append(Pet(pet:petDao))
+               petArray.append(Pet(pet:petDao))
             }
             return petArray
         }catch let error as NSError{
@@ -87,31 +87,6 @@ public class PetDao: NSManagedObject {
             try context.save()
         }catch let error as NSError{
             print("pet delete error \(error) \(error.userInfo)")
-        }
-        Model.petDataNotification.post()
-    }
-    
-    static func update(pet:Pet){
-        guard let context = context else {
-            return
-        }
-        
-        let fetchReq = PetDao.fetchRequest()
-        fetchReq.predicate = NSPredicate.init(format: "id == \(pet.id)")
-        
-        do{
-            let petsDao = try context.fetch(fetchReq)
-            for petDao in petsDao {
-                //context.updatedObjects({})
-            }
-        }catch let error as NSError{
-            print("Pet update error \(error) \(error.userInfo)")
-        }
-            
-        do{
-            try context.save()
-        }catch let error as NSError{
-            print("pet add error \(error) \(error.userInfo)")
         }
         Model.petDataNotification.post()
     }

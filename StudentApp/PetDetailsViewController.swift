@@ -52,4 +52,14 @@ class PetDetailsViewController: UIViewController {
             updateDisplay()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "openEditDetails"){
+            let dvc = segue.destination as! EditPetViewController
+            dvc.pet = pet
+            dvc.callbackResult = { result in
+                self.pet = result
+            }
+        }
+    }
 }
