@@ -12,25 +12,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginEmailTv: UITextField!
     @IBOutlet weak var loginPasswordTv: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
+        errorLabel.isHidden = true
     }
     
     @IBAction func login(_ sender: Any) {
+        errorLabel.isHidden = true
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        var email: String? = loginEmailTv.text
-        var password: String? = loginPasswordTv.text
+        let email: String? = loginEmailTv.text
+        let password: String? = loginPasswordTv.text
         
-        // TODO: check if user exist
-        
-        // TODO: if yes, navigate to app
-        
-        // TODO: if not, add error notif
-
+        // check fields
+        if (email == "" || password == "") {
+            errorLabel.text = "You must fill all required fields!"
+            errorLabel.isHidden = false
+            activityIndicator.isHidden = true
+        } else {
+            // TODO: check if user exist
+            
+            // TODO: if yes, navigate to app
+            
+            // TODO: if not, add error notif
+        }
     }
     
     
