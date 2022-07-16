@@ -9,22 +9,40 @@ import Foundation
 import MapKit
 import SwiftUI
 
+struct Search {
+    var text: String?
+    var coor: CLLocationCoordinate2D?
+}
+
 
 class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var searchBtn: UIButton!
     
     private let locationManager = CLLocationManager()
     private var currentLocationCoor: CLLocationCoordinate2D?
     
+    var search:Search?{
+        didSet{
+            if search != nil {
+            searchText.text = search!.text
+                currentLocationCoor = search?.coor
+            zoomToLatestLocation(with: currentLocationCoor!)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureLocationServices()
+        
+        if searchText.text != nil || searchText.text != "" {
+            onSearchLocation(self)
+        }
         
         mapView.delegate = self
         
@@ -87,7 +105,9 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        (viewController as? NewPetViewController)?.addressTv.text = searchText.text
+        let vc = viewController as? NewPetViewController
+        vc?.addressTv.text = searchText.text
+        vc?.addressCoor = currentLocationCoor!
     }
 }
 
