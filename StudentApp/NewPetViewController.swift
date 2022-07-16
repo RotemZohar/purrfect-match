@@ -86,8 +86,9 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "searchMapSegue" {
              let dvc = segue.destination as! MapSearchController
-             dvc.search = Search(text: addressTv.text ?? "", coor: addressCoor)
-             
+             if addressCoor != nil{
+                 dvc.search = Search(text: addressTv.text ?? "", coor: addressCoor)
+             }
          }
      }
      

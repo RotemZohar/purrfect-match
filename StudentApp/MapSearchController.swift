@@ -25,20 +25,18 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
     private let locationManager = CLLocationManager()
     private var currentLocationCoor: CLLocationCoordinate2D?
     
-    var search:Search?{
-        didSet{
-            if search != nil {
-            searchText.text = search!.text
-                currentLocationCoor = search?.coor
-            zoomToLatestLocation(with: currentLocationCoor!)
-            }
-        }
-    }
+    var search:Search?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureLocationServices()
+        
+        if search != nil {
+            searchText.text = search!.text
+            currentLocationCoor = search?.coor
+            zoomToLatestLocation(with: currentLocationCoor!)
+        }
         
         if searchText.text != nil || searchText.text != "" {
             onSearchLocation(self)
