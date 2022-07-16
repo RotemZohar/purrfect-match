@@ -852,7 +852,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pa-jZ-0kA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2474" y="-366"/>
-            </scene>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cAG-eJ-1VW"/>
