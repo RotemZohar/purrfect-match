@@ -91,4 +91,49 @@ class ModelFirebase{
         }
     }
     
+    func checkUser(email:String, password:String, completion:@escaping (Bool)->Void){
+        db.collection("Users")
+            .whereField("email", isEqualTo: email)
+            .whereField("password", isEqualTo: password)
+            .getDocuments() { (snapshot, err) in
+            if let err = err {
+                print("Check user or password: \(err)")
+                completion(false)
+            } else {
+                print("Loggin in...")
+                completion(true)
+            }
+        }
+    }
+    
+    func checkEmail(email:String, completion:@escaping (Bool)->Void){
+        db.collection("Users")
+            .whereField("email", isEqualTo: email)
+            .getDocuments() { (snapshot, err) in
+            if let err = err {
+                print("Email doesnt exist: \(err)")
+                completion(false)
+            } else {
+                print("Email exist")
+                completion(true)
+            }
+        }
+    }
+    
+    func addUser(name:String, email:String, password:String, completion:@escaping ()->Void){
+        db.collection("Users").document().setData([
+            "name": name,
+            "email": email,
+            "password": password,
+            "pets": []])
+        { err in
+            if let err = err {
+                print("Error adding user: \(err)")
+            } else {
+                print("user created")
+            }
+            completion()
+        }
+    }
+    
 }

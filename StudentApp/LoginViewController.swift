@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginEmailTv: UITextField!
     @IBOutlet weak var loginPasswordTv: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
@@ -33,14 +33,18 @@ class LoginViewController: UIViewController {
             errorLabel.text = "You must fill all required fields!"
             errorLabel.isHidden = false
             activityIndicator.isHidden = true
+            
         } else {
-            // TODO: check if user exist
-            
-            // TODO: if yes, navigate to app
-            performSegue(withIdentifier: "LoginSegue", sender: self)
-
-            
-            // TODO: if not, add error notif
+            // check if user exist
+            Model.instance.checkUserValid(email: email!, password: password!) { [self] isValid in
+                if (isValid) {
+                    performSegue(withIdentifier: "LoginSegue", sender: self)
+                } else {
+                    errorLabel.text = "User or password is incorrect"
+                    errorLabel.isHidden = false
+                    activityIndicator.isHidden = true
+                }
+            }
         }
     }
     
