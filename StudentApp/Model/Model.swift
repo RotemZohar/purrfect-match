@@ -68,9 +68,9 @@ class Model{
         }
     }
     
-    func add(pet:Pet, completion: @escaping ()->Void){
-        firebaseModel.add(pet: pet){
-            completion()
+    func add(pet:Pet, completion: @escaping (Pet)->Void){
+        firebaseModel.add(pet:pet){ response in
+            completion(response)
             Model.petDataNotification.post()
         }
     }

@@ -15,7 +15,7 @@ class EditPetViewController: UIViewController, UIImagePickerControllerDelegate &
     }
     
     @IBAction func openGallery(_ sender: Any) {
-        takePicture(source: .camera)
+        takePicture(source: .photoLibrary)
     }
     
     @IBOutlet weak var nameEv: UITextField!
