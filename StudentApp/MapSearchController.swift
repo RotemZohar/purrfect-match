@@ -35,6 +35,9 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
         if search != nil {
             searchText.text = search!.text
             currentLocationCoor = search?.coor
+            currentAnnotaion = MKPointAnnotation()
+            currentAnnotaion?.coordinate = currentLocationCoor!
+            mapView.addAnnotation(self.currentAnnotaion!)
             zoomToLatestLocation(with: currentLocationCoor!)
         }
         
