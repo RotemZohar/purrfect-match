@@ -442,6 +442,7 @@
                     <navigationItem key="navigationItem" id="jmM-uj-2NA"/>
                     <connections>
                         <outlet property="mapView" destination="mtG-Mf-hOP" id="kwa-WN-61p"/>
+                        <segue destination="eyb-kZ-Whz" kind="show" identifier="ShowPetDetailsFromMap" id="ggj-O8-3fw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ch2-HZ-xTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -500,7 +501,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-0q-BOM" userLabel="Address Tv">
-                                <rect key="frame" x="20" y="479" width="374" height="46"/>
+                                <rect key="frame" x="20" y="479" width="298" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -560,6 +561,17 @@
                                 <rect key="frame" x="314" y="56" width="100" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dug-Ia-NkK">
+                                <rect key="frame" x="326" y="484" width="62" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="location.magnifyingglass" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wmM-Th-tgg" kind="show" identifier="searchMapSegue" id="xBf-OF-wuJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2B0-4w-WDu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -628,7 +640,6 @@
                         <outlet property="mapView" destination="yWc-G8-2O5" id="lSB-V5-L7Z"/>
                         <outlet property="searchBtn" destination="hwZ-7O-QMK" id="fWN-ob-uM6"/>
                         <outlet property="searchText" destination="zca-yK-Jw6" id="q4m-bl-OeM"/>
-                        <segue destination="eyb-kZ-Whz" kind="show" identifier="ShowPetDetailsFromMap" id="E6o-6Z-hHQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbY-Rw-4j3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -728,11 +739,11 @@
             <objects>
                 <viewController id="o4c-Ab-I0A" customClass="SignUpViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0Z-jp-8tK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singup" translatesAutoresizingMaskIntoConstraints="NO" id="LjG-g2-r8F">
-                                <rect key="frame" x="8" y="67" width="396" height="208"/>
+                                <rect key="frame" x="10" y="67" width="394" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-p3-7yI">
@@ -806,7 +817,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-Zu-Asz">
-                                <rect key="frame" x="177" y="254" width="57" height="57"/>
+                                <rect key="frame" x="178" y="255" width="56" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-BL-1ud">
@@ -857,7 +868,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cAG-eJ-1VW"/>
-        <segue reference="E6o-6Z-hHQ"/>
+        <segue reference="xBf-OF-wuJ"/>
+        <segue reference="ggj-O8-3fw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Move2" width="870" height="773"/>

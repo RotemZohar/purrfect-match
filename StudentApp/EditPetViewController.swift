@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class EditPetViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -24,6 +25,7 @@ class EditPetViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var descriptionEv: UITextField!
     @IBOutlet weak var avatarImgEV: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var addressCoor: CLLocationCoordinate2D?
     
     var pet:Pet?{
         didSet{
@@ -39,6 +41,8 @@ class EditPetViewController: UIViewController, UIImagePickerControllerDelegate &
         addressEv.text = pet?.address
         breedEv.text = pet?.breed
         descriptionEv.text = pet?.desc
+        addressCoor = CLLocationCoordinate2D(latitude: pet!.latitude!, longitude: pet!.longtitude!)
+        
         if let urlStr = pet?.avatarUrl {
             let url = URL(string: urlStr)
             avatarImgEV.kf.setImage(with: url)
@@ -61,6 +65,9 @@ class EditPetViewController: UIViewController, UIImagePickerControllerDelegate &
         pet?.address = addressEv.text
         pet?.breed = breedEv.text
         pet?.desc = descriptionEv.text
+        pet?.latitude = addressCoor?.latitude
+        pet?.longtitude = addressCoor?.longitude
+        
         if let image = selectedImage{
             Model.instance.uploadImage(name: pet?.id ?? "", image: image) { url in
                 self.pet?.avatarUrl = url
@@ -99,5 +106,14 @@ class EditPetViewController: UIViewController, UIImagePickerControllerDelegate &
         self.avatarImgEV.image = selectedImage
         self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "searchMapSegue" {
+            let dvc = segue.destination as! MapSearchController
+            if addressCoor != nil{
+                dvc.search = Search(text: addressEv.text ?? "", coor: addressCoor)
+            }
+        }
     }
 }

@@ -20,6 +20,7 @@ class Pet {
     public var breed: String? = ""
     public var user: String? = ""
     public var lastUpdated: Int64 = 0
+    public var hasBeenDeleted: Bool = false
 
     init(){}
     
@@ -35,6 +36,7 @@ class Pet {
         lastUpdated = pet.lastUpdated
         longtitude = pet.longtitude as? Double
         latitude = pet.latitude as? Double
+        hasBeenDeleted = pet.hasBeenDeleted
     }
 }
 
@@ -51,6 +53,7 @@ extension Pet{
         p.user = json["user"] as? String
         p.longtitude = json["longtitude"] as? Double
         p.latitude = json["latitude"] as? Double
+        p.hasBeenDeleted = json["hasBeenDeleted"] as? Bool ?? true
         if let lup = json["lastUpdated"] as? Timestamp{
             p.lastUpdated = lup.seconds
         }
@@ -69,6 +72,7 @@ extension Pet{
         json["user"] = self.user!
         json["longtitude"] = self.longtitude!
         json["latitude"] = self.latitude!
+        json["hasBeenDeleted"] = self.hasBeenDeleted
         json["lastUpdated"] = FieldValue.serverTimestamp()
         return json
     }

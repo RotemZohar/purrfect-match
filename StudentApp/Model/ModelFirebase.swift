@@ -28,8 +28,10 @@ class ModelFirebase{
             } else {
                 for document in querySnapshot!.documents {
                     let s = Pet.FromJson(json: document.data())
+                    
                     s.id = document.documentID
                     pets.append(s)
+                    
                 }
                 completion(pets)
             }
