@@ -44,18 +44,18 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
         pet.user = Defaults.getUserInfo().email
         pet.longtitude = addressCoor?.longitude
         pet.latitude = addressCoor?.latitude
-        if let image = selectedImage{
-            Model.instance.uploadImage(name: pet.id!, image: image) { url in
-                pet.avatarUrl = url
-                Model.instance.add(pet: pet){
+        
+        Model.instance.add(pet: pet){ savedPet in
+                if let image = self.selectedImage {
+                    Model.instance.uploadImage(name: savedPet.id!, image: image) { url in
+                        pet.avatarUrl = url
+                        Model.instance.update(pet: pet) {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                } else {
                     self.navigationController?.popViewController(animated: true)
                 }
-                
-            }
-        }else{
-            Model.instance.add(pet: pet){
-                self.navigationController?.popViewController(animated: true)
-            }
         }
     }
     
