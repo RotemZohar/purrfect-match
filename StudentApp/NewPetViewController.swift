@@ -24,38 +24,46 @@ class NewPetViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet weak var breedTv: UITextField!
     @IBOutlet weak var descriptionTv: UITextField!
     @IBOutlet weak var avatarImgv: UIImageView!
+    @IBOutlet weak var errorMsgLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
+        errorMsgLabel.isHidden = true
+        addressTv.isEnabled = false
     }
     
     var addressCoor: CLLocationCoordinate2D?
     
     @IBAction func save(_ sender: Any) {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-        let pet = Pet()
-        pet.name = nameTv.text
-        pet.phone = phoneTv.text
-        pet.address = addressTv.text
-        pet.breed = breedTv.text
-        pet.desc = descriptionTv.text
-        pet.user = Defaults.getUserInfo().email
-        pet.longtitude = addressCoor?.longitude
-        pet.latitude = addressCoor?.latitude
-        
-        Model.instance.add(pet: pet){ savedPet in
-                if let image = self.selectedImage {
-                    Model.instance.uploadImage(name: savedPet.id!, image: image) { url in
-                        pet.avatarUrl = url
-                        Model.instance.update(pet: pet) {
-                            self.navigationController?.popViewController(animated: true)
+        if (nameTv.text?.isEmpty == true || phoneTv.text?.isEmpty == true || (addressTv.text?.isEmpty == true && addressCoor == nil)) {
+            errorMsgLabel.isHidden = false
+        } else {
+            errorMsgLabel.isHidden = true
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            let pet = Pet()
+            pet.name = nameTv.text
+            pet.phone = phoneTv.text
+            pet.address = addressTv.text
+            pet.breed = breedTv.text
+            pet.desc = descriptionTv.text
+            pet.user = Defaults.getUserInfo().email
+            pet.longtitude = addressCoor?.longitude
+            pet.latitude = addressCoor?.latitude
+            
+            Model.instance.add(pet: pet){ savedPet in
+                    if let image = self.selectedImage {
+                        Model.instance.uploadImage(name: savedPet.id!, image: image) { url in
+                            pet.avatarUrl = url
+                            Model.instance.update(pet: pet) {
+                                self.navigationController?.popViewController(animated: true)
+                            }
                         }
+                    } else {
+                        self.navigationController?.popViewController(animated: true)
                     }
-                } else {
-                    self.navigationController?.popViewController(animated: true)
-                }
+            }
         }
     }
     
