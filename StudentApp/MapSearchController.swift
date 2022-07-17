@@ -43,10 +43,11 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
         
         navigationController?.delegate = self
         
-        mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
+//        mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         
         
     }
+    var currentAnnotaion: MKPointAnnotation?
     
     @IBAction func onSearchLocation(_ sender: Any) {
         let searchRequest = MKLocalSearch.Request()
@@ -64,6 +65,13 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
             }
             
             guard let responseCoor = response.mapItems.first?.placemark.coordinate else {return}
+            
+            if self.currentAnnotaion != nil{
+                self.mapView.removeAnnotation(self.currentAnnotaion!)
+            }
+            self.currentAnnotaion = MKPointAnnotation()
+            self.currentAnnotaion?.coordinate = responseCoor
+            self.mapView.addAnnotation(self.currentAnnotaion!)
             
             self.zoomToLatestLocation(with: responseCoor)
             
@@ -133,6 +141,9 @@ extension MapSearchController: CLLocationManagerDelegate{
         }
         
         currentLocationCoor = latestLocation.coordinate
+        self.currentAnnotaion = MKPointAnnotation()
+        self.currentAnnotaion?.coordinate = latestLocation.coordinate
+        self.mapView.addAnnotation(self.currentAnnotaion!)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
