@@ -30,10 +30,10 @@ class ModelNotificatiponBase{
 }
 class Model{
     let firebaseModel = ModelFirebase()
-    let dispatchQueue = DispatchQueue(label: "com.studentapp") // TODO: FIX
+    let dispatchQueue = DispatchQueue(label: "com.purrfectMatch") // TODO: FIX
 
     // Notification center
-    static let petDataNotification = ModelNotificatiponBase("com.menachi.studentDataNotification") // TODO: FIX
+    static let petDataNotification = ModelNotificatiponBase("com.purrfectMatch.studentDataNotification") // TODO: FIX
     
     private init(){
        
