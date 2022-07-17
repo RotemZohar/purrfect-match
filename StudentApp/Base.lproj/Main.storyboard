@@ -123,7 +123,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-G0-KpG">
-                                <rect key="frame" x="283" y="70" width="100" height="95"/>
+                                <rect key="frame" x="283" y="70" width="100" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAL-SY-Odk">
@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9u-dy-L9Y">
-                                <rect key="frame" x="294" y="666" width="100" height="44"/>
+                                <rect key="frame" x="294" y="657" width="100" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save">
@@ -172,6 +172,13 @@
                                     <segue destination="wmM-Th-tgg" kind="show" identifier="searchMapSegue" id="bca-T4-qST"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, Phone and Address must be filled!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoM-yl-ge7" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="20" y="664" width="267" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OlJ-Pq-LGh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,6 +190,7 @@
                         <outlet property="avatarImgv" destination="oY2-V2-mBG" id="L9X-JA-7pb"/>
                         <outlet property="breedTv" destination="Nlc-1d-9hY" id="6DV-Ox-XOp"/>
                         <outlet property="descriptionTv" destination="Y9G-4c-jAL" id="3Ot-oR-Sey"/>
+                        <outlet property="errorMsgLabel" destination="LoM-yl-ge7" id="sg3-wk-l1j"/>
                         <outlet property="nameTv" destination="IGs-N8-CbZ" id="PUQ-dC-UWY"/>
                         <outlet property="phoneTv" destination="Xne-vQ-ih8" id="EGa-oq-ZV1"/>
                     </connections>
@@ -537,7 +545,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47T-Av-aiF">
-                                <rect key="frame" x="284" y="666" width="110" height="44"/>
+                                <rect key="frame" x="284" y="659" width="110" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update">
@@ -572,6 +580,13 @@
                                     <segue destination="wmM-Th-tgg" kind="show" identifier="searchMapSegue" id="xBf-OF-wuJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, Phone and Address must be filled!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-1m-8CR">
+                                <rect key="frame" x="20" y="659" width="273" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2B0-4w-WDu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -585,6 +600,7 @@
                         <outlet property="avatarImgEV" destination="m3m-hE-c3O" id="guv-Fp-B8h"/>
                         <outlet property="breedEv" destination="Kl8-Ob-Pkt" id="077-P1-6vO"/>
                         <outlet property="descriptionEv" destination="5tx-Op-FyK" id="sW1-sy-oel"/>
+                        <outlet property="errorMsgLabel" destination="W8d-1m-8CR" id="49x-UZ-sec"/>
                         <outlet property="nameEv" destination="iMV-L5-zSZ" id="l3V-25-HY3"/>
                         <outlet property="phoneEv" destination="BYf-KR-hbG" id="fGU-Sx-pDU"/>
                     </connections>
@@ -739,11 +755,11 @@
             <objects>
                 <viewController id="o4c-Ab-I0A" customClass="SignUpViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0Z-jp-8tK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singup" translatesAutoresizingMaskIntoConstraints="NO" id="LjG-g2-r8F">
-                                <rect key="frame" x="10" y="67" width="394" height="222"/>
+                                <rect key="frame" x="10" y="67" width="394" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-p3-7yI">
@@ -817,7 +833,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-Zu-Asz">
-                                <rect key="frame" x="178" y="255" width="56" height="63"/>
+                                <rect key="frame" x="178" y="255" width="56" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-BL-1ud">
