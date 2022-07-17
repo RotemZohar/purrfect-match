@@ -36,8 +36,10 @@ class ModelFirebase{
         }
     }
     
-    func add(pet:Pet, completion:@escaping ()->Void){
-        db.collection("Pets").document().setData(
+    func add(pet:Pet, completion:@escaping (Pet)->Void){
+        let doc = db.collection("Pets").document();
+        pet.id = doc.documentID
+        doc.setData(
             pet.toJson())
         { err in
             if let err = err {
@@ -45,7 +47,7 @@ class ModelFirebase{
             } else {
                 print("Document added with")
             }
-            completion()
+            completion(pet)
         }
     }
     
