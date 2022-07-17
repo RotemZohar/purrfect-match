@@ -38,9 +38,6 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
             zoomToLatestLocation(with: currentLocationCoor!)
         }
         
-        if searchText.text != nil || searchText.text != "" {
-            onSearchLocation(self)
-        }
         
         mapView.delegate = self
         
@@ -55,6 +52,8 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
         let searchRequest = MKLocalSearch.Request()
         
         searchRequest.naturalLanguageQuery = searchText.text
+        
+        searchRequest.region = mapView.region
         
         let search = MKLocalSearch(request: searchRequest)
         
@@ -104,11 +103,21 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         let vc = viewController as? NewPetViewController
-        vc?.addressTv.text = searchText.text
+        
+        if searchText.text == ""{
+            vc?.addressTv.text = String(currentLocationCoor!.latitude) + ", " + String(currentLocationCoor!.longitude)
+        } else {
+            vc?.addressTv.text = searchText.text
+        }
         vc?.addressCoor = currentLocationCoor!
         
         let vc2 = viewController as? EditPetViewController
-        vc2?.addressEv.text = searchText.text
+        
+        if searchText.text == ""{
+            vc2?.addressEv.text = String(currentLocationCoor!.latitude) + ", " + String(currentLocationCoor!.longitude)
+        } else {
+            vc2?.addressEv.text = searchText.text
+        }
         vc2?.addressCoor = currentLocationCoor!
     }
 }
