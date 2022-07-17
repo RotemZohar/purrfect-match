@@ -16,6 +16,7 @@ class PetDetailsViewController: UIViewController {
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
     @IBAction func onDelete(_ sender: Any) {
         if (pet != nil) {
@@ -50,6 +51,8 @@ class PetDetailsViewController: UIViewController {
 
         if pet != nil {
             updateDisplay()
+            deleteBtn.isHidden = Defaults.getUserInfo().email != pet?.user
+            editBtn.isHidden = Defaults.getUserInfo().email != pet?.user
         }
     }
     
