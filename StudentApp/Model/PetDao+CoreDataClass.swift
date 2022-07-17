@@ -27,7 +27,10 @@ public class PetDao: NSManagedObject {
             let petsDao = try context.fetch(PetDao.fetchRequest())
             var petArray:[Pet] = []
             for petDao in petsDao{
-               petArray.append(Pet(pet:petDao))
+                let pet = Pet(pet: petDao)
+                if pet.hasBeenDeleted == false {
+                    petArray.append(pet)
+                }
             }
             return petArray
         }catch let error as NSError{
@@ -53,6 +56,7 @@ public class PetDao: NSManagedObject {
         p.user = pet.user
         p.longtitude = pet.longtitude as NSNumber?
         p.latitude = pet.latitude as NSNumber?
+        p.hasBeenDeleted = pet.hasBeenDeleted
         
         do{
             try context.save()

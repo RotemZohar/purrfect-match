@@ -4,7 +4,9 @@
         <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="avatarUrl" optional="YES" attributeType="String"/>
         <attribute name="breed" optional="YES" attributeType="String"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="hasBeenDeleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -19,6 +21,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="PetDao" positionX="-54" positionY="-9" width="128" height="194"/>
+        <element name="PetDao" positionX="-54" positionY="-9" width="128" height="224"/>
     </elements>
 </model>

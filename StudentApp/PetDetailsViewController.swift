@@ -20,9 +20,13 @@ class PetDetailsViewController: UIViewController {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBAction func onDelete(_ sender: Any) {
         if (pet != nil) {
-            Model.instance.delete(pet: pet!) {
+            pet?.hasBeenDeleted = true
+            Model.instance.update(pet: pet!) {
                 self.navigationController?.popViewController(animated: true)
             }
+//            Model.instance.delete(pet: pet!) {
+//                self.navigationController?.popViewController(animated: true)
+//            }
         }
     }
     

@@ -25,6 +25,7 @@ extension PetDao {
     @NSManaged public var user: String?
     @NSManaged public var longtitude: NSNumber?
     @NSManaged public var latitude: NSNumber?
+    @NSManaged public var hasBeenDeleted: Bool
     @NSManaged public var lastUpdated: Int64
 
 }
