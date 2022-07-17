@@ -106,6 +106,10 @@ class MapSearchController: UIViewController, MKMapViewDelegate, UINavigationCont
         let vc = viewController as? NewPetViewController
         vc?.addressTv.text = searchText.text
         vc?.addressCoor = currentLocationCoor!
+        
+        let vc2 = viewController as? EditPetViewController
+        vc2?.addressEv.text = searchText.text
+        vc2?.addressCoor = currentLocationCoor!
     }
 }
 
