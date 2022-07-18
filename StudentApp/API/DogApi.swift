@@ -27,9 +27,9 @@ class DogApi{
     static func getThreeBreeds(onComplete:@escaping ([DogBreed])->Void){
         var breeds = [DogBreed]()
         let dispatchGroup = DispatchGroup()
-        for index in 1...20 {
+        for index in 1...35 {
             dispatchGroup.enter()
-            AF.request("https://api.thedogapi.com/v1/breeds/" + String(index)).responseDecodable(of:DogBreed.self){ response in
+            AF.request("https://api.thedogapi.com/v1/breeds/" + String(index * 5)).responseDecodable(of:DogBreed.self){ response in
                 switch response.result{
                 case .success(let breed):
                     breeds.append(breed)
