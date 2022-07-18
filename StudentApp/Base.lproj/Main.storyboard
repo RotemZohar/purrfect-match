@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" id="Qia-TT-kKV">
-                                            <rect key="frame" x="14" y="15" width="85" height="85"/>
+                                            <rect key="frame" x="14" y="15" width="85" height="84"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="Uw8-gD-nu3"/>
@@ -275,7 +275,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-NB-yB2">
-                                <rect key="frame" x="39" y="283" width="70" height="55"/>
+                                <rect key="frame" x="39" y="273" width="50" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="trash.circle.fill" catalog="system">
@@ -293,7 +293,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssU-Jv-RFv">
-                                <rect key="frame" x="304" y="283" width="70" height="55"/>
+                                <rect key="frame" x="324" y="273" width="50" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pencil.circle.fill" catalog="system">
@@ -508,91 +508,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-KR-hbG" userLabel="Phone Tv">
-                                <rect key="frame" x="20" y="416" width="374" height="46"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYf-KR-hbG" userLabel="Phone Tv">
+                                <rect key="frame" x="30" y="379" width="353" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-0q-BOM" userLabel="Address Tv">
-                                <rect key="frame" x="20" y="479" width="298" height="46"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-0q-BOM" userLabel="Address Tv">
+                                <rect key="frame" x="30" y="442" width="308" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kl8-Ob-Pkt" userLabel="Breed Tv">
-                                <rect key="frame" x="20" y="542" width="374" height="46"/>
+                                <rect key="frame" x="30" y="505" width="353" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tx-Op-FyK" userLabel="Description Tv">
-                                <rect key="frame" x="20" y="603" width="374" height="46"/>
+                                <rect key="frame" x="30" y="566" width="353" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVs-OI-Sfj">
-                                <rect key="frame" x="20" y="301" width="55" height="37"/>
+                                <rect key="frame" x="20" y="225" width="50" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="openCamera:" destination="UUF-Eg-hf8" eventType="touchUpInside" id="slk-LG-701"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esK-Kz-0GV">
-                                <rect key="frame" x="344" y="304" width="50" height="31"/>
+                                <rect key="frame" x="344" y="225" width="50" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="photo.artframe" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="photo.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="openGallery:" destination="UUF-Eg-hf8" eventType="touchUpInside" id="xco-TQ-ilZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47T-Av-aiF">
-                                <rect key="frame" x="284" y="659" width="110" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Update">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="update:" destination="UUF-Eg-hf8" eventType="touchUpInside" id="aA6-Sz-Dca"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-L5-zSZ">
-                                <rect key="frame" x="20" y="354" width="374" height="46"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-L5-zSZ">
+                                <rect key="frame" x="30" y="317" width="353" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="m3m-hE-c3O">
-                                <rect key="frame" x="33" y="112" width="348" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="CBN-xN-8xe">
                                 <rect key="frame" x="314" y="56" width="100" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dug-Ia-NkK">
-                                <rect key="frame" x="326" y="484" width="62" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="339" y="442" width="44" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="location.magnifyingglass" catalog="system" symbolScale="large"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="location.magnifyingglass" catalog="system" symbolScale="default"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="wmM-Th-tgg" kind="show" identifier="searchMapSegue" id="xBf-OF-wuJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, Phone and Address must be filled!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-1m-8CR">
-                                <rect key="frame" x="20" y="659" width="273" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name, Phone and Address must be filled!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-1m-8CR">
+                                <rect key="frame" x="30" y="636" width="353" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47T-Av-aiF">
+                                <rect key="frame" x="152" y="739" width="110" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="UPDATE">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="update:" destination="UUF-Eg-hf8" eventType="touchUpInside" id="aA6-Sz-Dca"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2B0-4w-WDu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -624,30 +629,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-G8-2O5">
-                                <rect key="frame" x="-1" y="-2" width="415" height="898"/>
+                                <rect key="frame" x="-1" y="88" width="415" height="808"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-7O-QMK">
-                                <rect key="frame" x="338" y="88" width="56" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="330" y="96" width="56" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onSearchLocation:" destination="wmM-Th-tgg" eventType="touchUpInside" id="aCn-v1-cnl"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zca-yK-Jw6">
-                                <rect key="frame" x="34" y="88" width="296" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="26" y="96" width="296" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXZ-tM-rAS">
-                                <rect key="frame" x="155" y="771" width="105" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="154" y="768" width="105" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SAVE">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onSave:" destination="wmM-Th-tgg" eventType="touchUpInside" id="bBJ-N1-4UI"/>
@@ -940,6 +947,7 @@
         <image name="Move2" width="870" height="773"/>
         <image name="avatar" width="100" height="100"/>
         <image name="camera" catalog="system" width="32" height="32"/>
+        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
@@ -947,6 +955,7 @@
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="power.circle.fill" catalog="system" width="128" height="121"/>
         <image name="singup" width="350" height="150"/>
         <image name="tortoise.fill" catalog="system" width="128" height="66"/>
