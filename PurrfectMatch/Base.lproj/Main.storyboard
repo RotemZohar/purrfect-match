@@ -12,13 +12,13 @@
         <!--Pets List-->
         <scene sceneID="aNJ-RV-FeX">
             <objects>
-                <tableViewController id="iW2-sY-j9r" customClass="PetsTableViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="iW2-sY-j9r" customClass="PetsTableViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eVo-EA-zHV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="114" id="9co-Yv-FVZ" customClass="PetTableViewCell" customModule="StudentApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="114" id="9co-Yv-FVZ" customClass="PetTableViewCell" customModule="PurrfectMatch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9co-Yv-FVZ" id="eFc-ty-iQX">
@@ -80,7 +80,7 @@
         <!--New pet-->
         <scene sceneID="P70-2h-Ym8">
             <objects>
-                <viewController id="HkU-vh-pns" customClass="NewPetViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HkU-vh-pns" customClass="NewPetViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="76B-cW-gmQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,7 +203,7 @@
         <!--Pet-->
         <scene sceneID="But-tF-Sk2">
             <objects>
-                <viewController id="eyb-kZ-Whz" customClass="PetDetailsViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eyb-kZ-Whz" customClass="PetDetailsViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRA-08-tLU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -352,7 +352,7 @@
         <!--Dog Breeds-->
         <scene sceneID="Iow-wQ-rUU">
             <objects>
-                <viewController id="BC7-aa-knE" customClass="DogBreedViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BC7-aa-knE" customClass="DogBreedViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDV-RG-zQy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +362,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SWCell" rowHeight="160" id="cmN-Qi-g2i" customClass="DogBreedTableViewCell" customModule="StudentApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SWCell" rowHeight="160" id="cmN-Qi-g2i" customClass="DogBreedTableViewCell" customModule="PurrfectMatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cmN-Qi-g2i" id="1yj-gB-iBG">
@@ -445,7 +445,7 @@
         <!--Map View Controller-->
         <scene sceneID="e4B-5O-zyM">
             <objects>
-                <viewController id="0Ys-au-Zz6" customClass="MapViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Ys-au-Zz6" customClass="MapViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ymS-GN-sK8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -510,7 +510,7 @@
         <!--Edit pet-->
         <scene sceneID="r7N-qU-4E9">
             <objects>
-                <viewController id="UUF-Eg-hf8" userLabel="Edit pet" customClass="EditPetViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UUF-Eg-hf8" userLabel="Edit pet" customClass="EditPetViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mRp-ZJ-xrN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,7 +630,7 @@
         <!--Map Search Controller-->
         <scene sceneID="K2d-o8-Zdk">
             <objects>
-                <viewController id="wmM-Th-tgg" customClass="MapSearchController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wmM-Th-tgg" customClass="MapSearchController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q80-Uv-ayD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +685,7 @@
         <!--Login View Controller-->
         <scene sceneID="HUF-1S-gSh">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="1Nx-I2-42L" customClass="LoginViewController" customModule="StudentApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="1Nx-I2-42L" customClass="LoginViewController" customModule="PurrfectMatch" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Skz-4c-jXJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -773,7 +773,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="sxm-f3-FmH">
             <objects>
-                <viewController id="o4c-Ab-I0A" customClass="SignUpViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o4c-Ab-I0A" customClass="SignUpViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0Z-jp-8tK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -889,7 +889,7 @@
         <!--Account-->
         <scene sceneID="SnR-YU-QMC">
             <objects>
-                <viewController id="hPY-Ub-Ucp" customClass="AccountViewController" customModule="StudentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hPY-Ub-Ucp" customClass="AccountViewController" customModule="PurrfectMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3H5-5F-QtP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

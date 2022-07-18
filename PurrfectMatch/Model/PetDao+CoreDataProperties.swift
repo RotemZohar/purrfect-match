@@ -1,6 +1,6 @@
 //
 //  PetDao+CoreDataProperties.swift
-//  StudentApp
+//  PurrfectMatch
 //
 //  Created by admin on 01/07/2022.
 //

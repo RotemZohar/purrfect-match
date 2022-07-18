@@ -188,7 +188,7 @@
 				9451152D283E77F400B96F7B /* Kingfisher */,
 				941ED1D8284B7A87005C2F62 /* Alamofire */,
 			);
-			productName = StudentApp;
+			productName = PurrfectMatch;
 			productReference = CE52A23D27FDCA1100C737CE /* PurrfectMatch.app */;
 			productType = "com.apple.product-type.application";
 		};
