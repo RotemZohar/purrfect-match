@@ -59,6 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.register(MyAnnotationView.self, forAnnotationViewWithReuseIdentifier: "MyAnnotation")
         Model.petDataNotification.observe {
+            self.mapView.removeAnnotations(self.mapView.annotations)
             self.loadAnnotations()
         }
         loadAnnotations()
