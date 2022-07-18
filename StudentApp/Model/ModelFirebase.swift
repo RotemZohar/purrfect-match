@@ -102,13 +102,18 @@ class ModelFirebase{
             .getDocuments() { (snapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                completion(false)
+                    completion(false)
             } else {
                 if(snapshot!.documents.isEmpty) {
                     print("User doesnt exist")
                     completion(false)
                 } else {
                     print("Loggin in...")
+                    for document in snapshot!.documents {
+                        let u = User.FromJson(json: document.data())
+                        Defaults.save(user: u)
+                        Defaults.sync()
+                    }
                     completion(true)
                 }
             }
