@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  PurrfectMatch
 //
-//  Created by Eliav Menachi on 15/06/2022.
+//  Created by admin on 15/06/2022.
 //
 
 import UIKit
@@ -32,8 +32,6 @@ class MyAnnotationView: MKMarkerAnnotationView{
             calloutOffset = CGPoint(x: -5, y: 5)
             rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             glyphText = myAnno.pet?.name
-            // TODO: maybe load pet image
-//            glyphImage = UIImage(named: "icons8-apple-logo-30")
         }
     }
 }

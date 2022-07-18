@@ -2,7 +2,7 @@
 //  Model.swift
 //  PurrfectMatch
 //
-//  Created by Eliav Menachi on 11/05/2022.
+//  Created by admin on 11/05/2022.
 //
 
 import Foundation
@@ -30,10 +30,10 @@ class ModelNotificatiponBase{
 }
 class Model{
     let firebaseModel = ModelFirebase()
-    let dispatchQueue = DispatchQueue(label: "com.purrfectMatch") // TODO: FIX
+    let dispatchQueue = DispatchQueue(label: "com.purrfectMatch")
 
     // Notification center
-    static let petDataNotification = ModelNotificatiponBase("com.purrfectMatch.studentDataNotification") // TODO: FIX
+    static let petDataNotification = ModelNotificatiponBase("com.purrfectMatch.petsDataNotification") 
     
     private init(){
        
