@@ -65,7 +65,7 @@
 		94A9CE162850E49D0099E1FF /* DogBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedViewController.swift; sourceTree = "<group>"; };
 		94A9CE182850E8F10099E1FF /* DogBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedTableViewCell.swift; sourceTree = "<group>"; };
 		94DE86D428352F5A0072DD75 /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
-		CE52A23D27FDCA1100C737CE /* StudentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE52A23D27FDCA1100C737CE /* PurrfectMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurrfectMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE52A24027FDCA1100C737CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE52A24227FDCA1100C737CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE52A24427FDCA1100C737CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		CE52A23427FDCA1100C737CE = {
 			isa = PBXGroup;
 			children = (
-				CE52A23F27FDCA1100C737CE /* StudentApp */,
+				CE52A23F27FDCA1100C737CE /* PurrfectMatch */,
 				CE52A23E27FDCA1100C737CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,12 +115,12 @@
 		CE52A23E27FDCA1100C737CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE52A23D27FDCA1100C737CE /* StudentApp.app */,
+				CE52A23D27FDCA1100C737CE /* PurrfectMatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE52A23F27FDCA1100C737CE /* StudentApp */ = {
+		CE52A23F27FDCA1100C737CE /* PurrfectMatch */ = {
 			isa = PBXGroup;
 			children = (
 				84F711EB288085C9006E5FAA /* GoogleService-Info.plist */,
@@ -147,7 +147,7 @@
 				84ABC7D22881FEB100D68404 /* SignUpViewController.swift */,
 				84ABC7EA28855B5F00D68404 /* AccountViewController.swift */,
 			);
-			path = StudentApp;
+			path = PurrfectMatch;
 			sourceTree = "<group>";
 		};
 		CE52A25A27FDE53A00C737CE /* Model */ = {
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE52A23C27FDCA1100C737CE /* StudentApp */ = {
+		CE52A23C27FDCA1100C737CE /* PurrfectMatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE52A25127FDCA1200C737CE /* Build configuration list for PBXNativeTarget "StudentApp" */;
+			buildConfigurationList = CE52A25127FDCA1200C737CE /* Build configuration list for PBXNativeTarget "PurrfectMatch" */;
 			buildPhases = (
 				CE52A23927FDCA1100C737CE /* Sources */,
 				CE52A23A27FDCA1100C737CE /* Frameworks */,
@@ -179,7 +179,7 @@
 			);
 			dependencies = (
 			);
-			name = StudentApp;
+			name = PurrfectMatch;
 			packageProductDependencies = (
 				94DE86CC28352D880072DD75 /* FirebaseAnalytics */,
 				94DE86CE28352D880072DD75 /* FirebaseAuth */,
@@ -189,7 +189,7 @@
 				941ED1D8284B7A87005C2F62 /* Alamofire */,
 			);
 			productName = StudentApp;
-			productReference = CE52A23D27FDCA1100C737CE /* StudentApp.app */;
+			productReference = CE52A23D27FDCA1100C737CE /* PurrfectMatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE52A23827FDCA1100C737CE /* Build configuration list for PBXProject "StudentApp" */;
+			buildConfigurationList = CE52A23827FDCA1100C737CE /* Build configuration list for PBXProject "PurrfectMatch" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE52A23C27FDCA1100C737CE /* StudentApp */,
+				CE52A23C27FDCA1100C737CE /* PurrfectMatch */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StudentApp/Info.plist;
+				INFOPLIST_FILE = PurrfectMatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Purrfect Match";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -450,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StudentApp/Info.plist;
+				INFOPLIST_FILE = PurrfectMatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Purrfect Match";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -474,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE52A23827FDCA1100C737CE /* Build configuration list for PBXProject "StudentApp" */ = {
+		CE52A23827FDCA1100C737CE /* Build configuration list for PBXProject "PurrfectMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE52A24F27FDCA1200C737CE /* Debug */,
@@ -483,7 +483,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE52A25127FDCA1200C737CE /* Build configuration list for PBXNativeTarget "StudentApp" */ = {
+		CE52A25127FDCA1200C737CE /* Build configuration list for PBXNativeTarget "PurrfectMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE52A25227FDCA1200C737CE /* Debug */,

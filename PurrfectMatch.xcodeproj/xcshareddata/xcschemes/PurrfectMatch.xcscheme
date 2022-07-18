@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE52A23C27FDCA1100C737CE"
-               BuildableName = "StudentApp.app"
-               BlueprintName = "StudentApp"
-               ReferencedContainer = "container:StudentApp.xcodeproj">
+               BuildableName = "PurrfectMatch.app"
+               BlueprintName = "PurrfectMatch"
+               ReferencedContainer = "container:PurrfectMatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE52A23C27FDCA1100C737CE"
-            BuildableName = "StudentApp.app"
-            BlueprintName = "StudentApp"
-            ReferencedContainer = "container:StudentApp.xcodeproj">
+            BuildableName = "PurrfectMatch.app"
+            BlueprintName = "PurrfectMatch"
+            ReferencedContainer = "container:PurrfectMatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE52A23C27FDCA1100C737CE"
-            BuildableName = "StudentApp.app"
-            BlueprintName = "StudentApp"
-            ReferencedContainer = "container:StudentApp.xcodeproj">
+            BuildableName = "PurrfectMatch.app"
+            BlueprintName = "PurrfectMatch"
+            ReferencedContainer = "container:PurrfectMatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
