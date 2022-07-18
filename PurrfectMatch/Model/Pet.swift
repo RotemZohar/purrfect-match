@@ -12,7 +12,7 @@ class Pet {
     public var id: String? = ""
     public var name: String? = ""
     public var phone: String? = ""
-    public var avatarUrl: String? = ""
+    public var avatarUrl: String? = "https://firebasestorage.googleapis.com/v0/b/purrfect-match-b6534.appspot.com/o/pet-pic.png?alt=media&token=987fa2db-c1cd-4a6f-9032-4cbd3c99d1b7"
     public var desc: String? = ""
     public var address: String? = ""
     public var longtitude: Double? = 0
