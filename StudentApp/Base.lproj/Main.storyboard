@@ -325,7 +325,7 @@
         <scene sceneID="0TL-it-rnR">
             <objects>
                 <navigationController id="Rnf-9W-ceN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Breeds" image="filemenu.and.selection" catalog="system" id="Fde-XS-JQQ"/>
+                    <tabBarItem key="tabBarItem" title="Breeds" image="list.bullet.rectangle.fill" catalog="system" id="Fde-XS-JQQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxc-zO-fco">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -414,11 +414,11 @@
             </objects>
             <point key="canvasLocation" x="2339.130434782609" y="-474.10714285714283"/>
         </scene>
-        <!--map-->
+        <!--Map-->
         <scene sceneID="XC7-ah-ElP">
             <objects>
                 <navigationController id="3oY-vF-buY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="map" image="map" catalog="system" id="MWh-UW-9rG"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="MWh-UW-9rG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IQp-WD-bd4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -461,7 +461,7 @@
         <scene sceneID="sd1-6L-5MN">
             <objects>
                 <navigationController id="bAI-UH-YT0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pets" image="tortoise" catalog="system" id="szI-wS-8Fk"/>
+                    <tabBarItem key="tabBarItem" title="Pets" image="tortoise.fill" catalog="system" id="szI-wS-8Fk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1lr-iA-tlh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -935,16 +935,16 @@
         <image name="Move2" width="870" height="773"/>
         <image name="avatar" width="100" height="100"/>
         <image name="camera" catalog="system" width="32" height="32"/>
-        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
+        <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="power.circle.fill" catalog="system" width="128" height="121"/>
         <image name="singup" width="350" height="150"/>
-        <image name="tortoise" catalog="system" width="128" height="68"/>
+        <image name="tortoise.fill" catalog="system" width="128" height="66"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
